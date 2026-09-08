@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>SHOP</title>
+
+<style>
+    body {
+        font-family: "Inter", Arial, sans-serif;
+        background: #fafafa;
+        color: #222;
+        margin: 0;
+        padding: 2rem;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 48px;
+        font-weight: 800;
+        color: #e63946;
+        margin-bottom: 10px;
+        letter-spacing: 2px;
+    }
+
+    h2 {
+        font-size: 26px;
+        font-weight: 600;
+        color: #1d3557;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 16px;
+        color: #444;
+        max-width: 600px;
+        margin: 0 auto 20px auto;
+        line-height: 1.6;
+    }
+
+    .prix {
+        color: #e63946;
+        font-weight: 600;
+    }
+
+    .old {
+        color: #2a9d8f;
+        font-weight: 600;
+    }
+
+    .actions {
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    a, button {
+        font-family: "Inter", Arial, sans-serif;
+        background: #457b9d;
+        color: #fff;
+        padding: 10px 18px;
+        border-radius: 8px;
+        font-size: 14px;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    a:hover, button:hover {
+        background: #1d3557;
+    }
+
+    /* Message popup */
+    #msg {
+        margin-top: 20px;
+        font-size: 15px;
+        color: #1d3557;
+        font-weight: 600;
+        opacity: 0;
+        transition: opacity 0.4s;
+    }
+</style>
+</head>
+
+<body>
+
+<h1>SOLDES</h1>
+<h2>Achetez</h2>
+
+<p>
+    Les articles <span class="prix">en promo</span> sont en rouge,  
+    les <span class="old">normaux</span> en vert.  
+    Rien d’autre ne le dit.
+</p>
+
+<div class="actions">
+    <a href="#" onclick="showMsg('CLICK')">CLICK</a>
+    <button onclick="showMsg('BUY')">BUY</button>
+    <a href="#" onclick="showMsg('info')">info</a>
+</div>
+
+<p id="msg"></p>
+
+<script>
+function showMsg(type) {
+    const msg = document.getElementById("msg");
+    msg.textContent = "Vous avez appuyé sur : " + type;
+    msg.style.opacity = 1;
+
+    setTimeout(() => {
+        msg.style.opacity = 0;
+    }, 1800);
+}
+</script>
+
+</body>
+</html>
