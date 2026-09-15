@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Court Log — suivi de joueurs de tennis</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+  :root{
+    --ink:#12181B;
+    --surface:#1A2226;
+    --surface-2:#212B30;
+    --line:#2C383E;
+    --chalk:#F3F5EF;
+    --chalk-dim:#9CA9A6;
+    --lime:#D7DE6E;
+    --clay:#C1622F;
+    --grass:#4C7A50;
+    --hard:#3E7EA8;
+    --win:#7FAE72;
+    --loss:#B9645B;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--ink);
+    color:var(--chalk);
+    font-family:'Inter',sans-serif;
+    min-height:100vh;
+  }
+  .display{font-family:'Barlow Condensed',sans-serif;}
+
+  .wrap{max-width:920px;margin:0 auto;padding:36px 20px 80px;}
+
+  header.top{border-bottom:1px solid var(--line);padding-bottom:24px;margin-bottom:28px;}
+  header.top h1{
+    font-family:'Barlow Condensed',sans-serif;
+    font-weight:700;
+    font-size:44px;
+    letter-spacing:.2px;
+    margin:0 0 6px;
+    line-height:1;
+  }
+  header.top p{margin:0 0 22px;color:var(--chalk-dim);font-size:15px;max-width:520px;}
+
+  .search-row{display:flex;gap:10px;}
+  .search-row input{
+    flex:1;
+    background:var(--surface);
+    border:1px solid var(--line);
+    color:var(--chalk);
+    font-family:'Inter',sans-serif;
+    font-size:15px;
+    padding:12px 14px;
+    border-radius:6px;
+    outline:none;
+  }
+  .search-row input:focus{border-color:var(--lime);}
+  .search-row input::placeholder{color:var(--chalk-dim);}
+
+  .section-label{
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:13px;
+    letter-spacing:.3px;
+    color:var(--chalk-dim);
+    margin:0 0 12px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .section-label::after{content:"";flex:1;height:1px;background:var(--line);}
+
+  .fav-strip{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px;}
+  .fav-chip{
+    display:flex;align-items:center;gap:8px;
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:20px;
+    padding:6px 12px 6px 6px;
+    cursor:pointer;
+    font-size:13px;
+    color:var(--chalk);
+  }
+  .fav-chip:hover{border-color:var(--chalk-dim);}
+  .fav-chip .mini-avatar{width:22px;height:22px;font-size:10px;}
+  .fav-chip .next{color:var(--chalk-dim);font-size:11px;}
+
+  .empty-note{color:var(--chalk-dim);font-size:14px;margin-bottom:32px;}
+
+  .player-row{
+    display:flex;align-items:center;gap:14px;
+    padding:14px 4px;
+    border-bottom:1px solid var(--line);
+    cursor:pointer;
+  }
+  .player-row:hover{background:var(--surface);}
+  .player-row .rank{
+    width:34px;text-align:right;
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:20px;color:var(--chalk-dim);
+    flex-shrink:0;
+  }
+  .avatar{
+    width:40px;height:40px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Barlow Condensed',sans-serif;
+    font-weight:600;font-size:15px;
+    color:var(--ink);
+    flex-shrink:0;
+  }
+  .tour-atp{background:var(--hard);}
+  .tour-wta{background:var(--lime);}
+
+  .player-row .info{flex:1;min-width:0;}
+  .player-row .name{font-size:15.5px;font-weight:500;margin:0;}
+  .player-row .meta{font-size:12.5px;color:var(--chalk-dim);margin:2px 0 0;}
+
+  .star-btn{
+    background:none;border:none;color:var(--chalk-dim);
+    font-size:19px;cursor:pointer;line-height:1;padding:4px;
+    flex-shrink:0;
+  }
+  .star-btn.active{color:var(--lime);}
+
+  .no-results{color:var(--chalk-dim);padding:30px 4px;font-size:14px;}
+
+  /* profile view */
+  .profile{display:none;}
+  .profile.open{display:block;}
+  .list-view.hidden{display:none;}
+
+  .back-btn{
+    background:none;border:none;color:var(--chalk-dim);
+    font-size:14px;cursor:pointer;padding:0;margin-bottom:20px;
+    display:flex;align-items:center;gap:6px;
+  }
+  .back-btn:hover{color:var(--chalk);}
+
+  .profile-head{display:flex;align-items:flex-start;gap:18px;margin-bottom:6px;}
+  .avatar-lg{
+    width:76px;height:76px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:26px;
+    color:var(--ink);flex-shrink:0;
+  }
+  .profile-head .who{flex:1;}
+  .profile-head h2{
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:36px;font-weight:700;margin:0 0 2px;line-height:1.05;
+  }
+  .profile-head .sub{color:var(--chalk-dim);font-size:14px;margin:0;}
+  .profile-head .fav-toggle{
+    background:var(--surface);border:1px solid var(--line);
+    color:var(--chalk);border-radius:6px;padding:9px 14px;
+    font-size:13.5px;cursor:pointer;display:flex;align-items:center;gap:7px;
+    white-space:nowrap;
+  }
+  .profile-head .fav-toggle.active{border-color:var(--lime);color:var(--lime);}
+
+  .bio{color:var(--chalk-dim);font-size:14.5px;line-height:1.6;margin:18px 0 26px;max-width:640px;}
+
+  .stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-bottom:30px;}
+  .stat-cell{background:var(--surface);padding:14px 16px;}
+  .stat-cell .num{font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:600;line-height:1;}
+  .stat-cell .lbl{color:var(--chalk-dim);font-size:11.5px;margin-top:5px;}
+
+  .next-match{
+    border:1px solid var(--line);border-left:3px solid var(--lime);
+    padding:14px 16px;margin-bottom:32px;border-radius:0 6px 6px 0;
+  }
+  .next-match .tag{color:var(--lime);font-size:11.5px;font-family:'Barlow Condensed',sans-serif;letter-spacing:.3px;margin-bottom:4px;}
+  .next-match .line1{font-size:15px;font-weight:500;margin:0 0 3px;}
+  .next-match .line2{color:var(--chalk-dim);font-size:13px;}
+
+  .results-list .res-row{
+    display:flex;align-items:center;gap:12px;
+    padding:10px 0;border-bottom:1px solid var(--line);
+    font-size:13.5px;
+  }
+  .res-row .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
+  .dot.clay{background:var(--clay);}
+  .dot.grass{background:var(--grass);}
+  .dot.hard{background:var(--hard);}
+  .res-row .wl{
+    width:20px;text-align:center;font-weight:600;font-size:12px;
+    border-radius:3px;padding:2px 0;flex-shrink:0;
+  }
+  .wl.w{color:var(--win);}
+  .wl.l{color:var(--loss);}
+  .res-row .opp{flex:1;min-width:0;}
+  .res-row .opp .vs{color:var(--chalk-dim);}
+  .res-row .score{font-family:'Barlow Condensed',sans-serif;font-size:14px;flex-shrink:0;}
+  .res-row .tourn{color:var(--chalk-dim);font-size:12px;width:150px;flex-shrink:0;text-align:right;}
+
+  .trophy-list{margin-top:6px;}
+  .trophy-row{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--line);font-size:14px;}
+  .trophy-row .yrs{color:var(--chalk-dim);font-size:12.5px;}
+
+  footer.disclaimer{margin-top:50px;padding-top:18px;border-top:1px solid var(--line);color:var(--chalk-dim);font-size:12px;line-height:1.6;}
+
+  @media(max-width:520px){
+    header.top h1{font-size:34px;}
+    .res-row .tourn{display:none;}
+    .profile-head h2{font-size:28px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <div class="list-view" id="listView">
+    <header class="top">
+      <h1>Court Log</h1>
+      <p>Cherche n'importe quel joueur ou joueuse, consulte son profil, son palmarès et ses derniers résultats. Mets tes favoris de côté pour suivre leurs prochains matchs.</p>
+      <div class="search-row">
+        <input type="text" id="searchInput" placeholder="Nom du joueur, de la joueuse ou pays…" autocomplete="off">
+      </div>
+    </header>
+
+    <div id="favSection"></div>
+
+    <p class="section-label" id="listLabel">Tous les joueurs</p>
+    <div id="playerList"></div>
+  </div>
+
+  <div class="profile" id="profileView">
+    <button class="back-btn" id="backBtn">&larr; Retour à la recherche</button>
+    <div id="profileContent"></div>
+  </div>
+
+  <footer class="disclaimer">
+    Données d'exemple à but de démonstration — classements, résultats et palmarès ne reflètent pas nécessairement l'actualité du circuit. Les favoris sont enregistrés sur cet appareil.
+  </footer>
+</div>
+
+<script>
+// ---------- Données ----------
+const PLAYERS = [
+  {id:"djokovic", name:"Novak Djokovic", country:"Serbie", flag:"RS", tour:"ATP", rank:5,
+   bio:"Recordman du nombre de titres du Grand Chelem chez les hommes, connu pour sa longévité exceptionnelle et sa capacité à rester compétitif au plus haut niveau plus de deux décennies durant.",
+   titles:99, slams:24, masters:40, weeksNo1:428,
+   palmares:[{name:"Open d'Australie",count:10,years:"2008-2023"},{name:"Roland-Garros",count:3,years:"2016, 2021, 2023"},{name:"Wimbledon",count:7,years:"2011-2022"},{name:"US Open",count:4,years:"2011-2023"}],
+   next:{tournament:"Masters 1000 de Shanghai",round:"2e tour",opponent:"À déterminer",date:"vendredi",surface:"hard"},
+   results:[
+     {opp:"J. Sinner",score:"6-7 4-6",res:"L",tourn:"ATP Finals",surface:"hard"},
+     {opp:"A. Zverev",score:"6-3 6-4",res:"W",tourn:"US Open",surface:"hard"},
+     {opp:"C. Alcaraz",score:"6-4 5-7 6-2",res:"W",tourn:"Roland-Garros",surface:"clay"},
+     {opp:"D. Medvedev",score:"3-6 6-2 6-1",res:"W",tourn:"Open d'Australie",surface:"hard"}
+   ]},
+  {id:"alcaraz", name:"Carlos Alcaraz", country:"Espagne", flag:"ES", tour:"ATP", rank:1,
+   bio:"Prodige espagnol capable de dominer sur toutes les surfaces, réputé pour son explosivité et sa créativité au filet comme au fond du court.",
+   titles:18, slams:6, masters:6, weeksNo1:42,
+   palmares:[{name:"Roland-Garros",count:2,years:"2024, 2025"},{name:"Wimbledon",count:2,years:"2023, 2024"},{name:"US Open",count:2,years:"2022, 2025"}],
+   next:{tournament:"Masters 1000 de Shanghai",round:"3e tour",opponent:"J. Sinner (probable)",date:"samedi",surface:"hard"},
+   results:[
+     {opp:"J. Sinner",score:"7-6 6-3",res:"W",tourn:"US Open",surface:"hard"},
+     {opp:"N. Djokovic",score:"6-2 6-3",res:"W",tourn:"Wimbledon",surface:"grass"},
+     {opp:"J. Sinner",score:"4-6 6-7",res:"L",tourn:"Roland-Garros",surface:"clay"},
+     {opp:"A. Zverev",score:"6-4 6-1",res:"W",tourn:"Rome",surface:"clay"}
+   ]},
+  {id:"sinner", name:"Jannik Sinner", country:"Italie", flag:"IT", tour:"ATP", rank:2,
+   bio:"Numéro un mondial italien reconnu pour la puissance et la régularité de son jeu de fond de court, bâti autour d'un coup droit et d'un revers très plats.",
+   titles:20, slams:4, masters:5, weeksNo1:65,
+   palmares:[{name:"Open d'Australie",count:2,years:"2024, 2025"},{name:"US Open",count:2,years:"2024, 2025"}],
+   next:{tournament:"Masters 1000 de Shanghai",round:"Quarts de finale",opponent:"À déterminer",date:"dimanche",surface:"hard"},
+   results:[
+     {opp:"C. Alcaraz",score:"6-7 3-6",res:"L",tourn:"US Open",surface:"hard"},
+     {opp:"N. Djokovic",score:"7-6 4-6 6-3",res:"W",tourn:"ATP Finals",surface:"hard"},
+     {opp:"C. Alcaraz",score:"6-4 7-6",res:"W",tourn:"Roland-Garros",surface:"clay"},
+     {opp:"A. Zverev",score:"6-3 6-2",res:"W",tourn:"Open d'Australie",surface:"hard"}
+   ]},
+  {id:"nadal", name:"Rafael Nadal", country:"Espagne", flag:"ES", tour:"ATP", rank:null,
+   bio:"Le « Roi de la terre battue », treize fois vainqueur à Roland-Garros, célèbre pour son jeu physique, sa rotation de balle extrême et sa combativité mentale.",
+   titles:92, slams:22, masters:36, weeksNo1:209,
+   palmares:[{name:"Roland-Garros",count:14,years:"2005-2022"},{name:"US Open",count:4,years:"2010-2019"},{name:"Open d'Australie",count:2,years:"2009, 2022"},{name:"Wimbledon",count:2,years:"2008, 2010"}],
+   next:null,
+   results:[
+     {opp:"A. de Minaur",score:"1-6 2-6",res:"L",tourn:"Roland-Garros",surface:"clay"},
+     {opp:"C. Alcaraz",score:"6-4 6-4",res:"W",tourn:"Madrid",surface:"clay"}
+   ]},
+  {id:"federer", name:"Roger Federer", country:"Suisse", flag:"CH", tour:"ATP", rank:null,
+   bio:"Considéré comme l'un des joueurs les plus élégants de l'histoire du tennis, reconnu pour la finesse de son toucher de balle et sa domination sur gazon.",
+   titles:103, slams:20, masters:28, weeksNo1:310,
+   palmares:[{name:"Wimbledon",count:8,years:"2003-2017"},{name:"Open d'Australie",count:6,years:"2004-2018"},{name:"US Open",count:5,years:"2004-2008"},{name:"Roland-Garros",count:1,years:"2009"}],
+   next:null,
+   results:[
+     {opp:"R. Nadal",score:"6-4 6-3",res:"W",tourn:"Laver Cup (exhibition)",surface:"hard"}
+   ]},
+  {id:"medvedev", name:"Daniil Medvedev", country:"Russie", flag:"RU", tour:"ATP", rank:14,
+   bio:"Style atypique construit autour d'un jeu très reculé et d'une lecture de jeu hors norme, capable de perturber les meilleurs frappeurs du circuit.",
+   titles:21, slams:1, masters:6, weeksNo1:16,
+   palmares:[{name:"US Open",count:1,years:"2021"}],
+   next:{tournament:"Masters 1000 de Shanghai",round:"1er tour",opponent:"T. Fritz",date:"jeudi",surface:"hard"},
+   results:[
+     {opp:"T. Fritz",score:"3-6 6-4 4-6",res:"L",tourn:"US Open",surface:"hard"},
+     {opp:"H. Rune",score:"6-3 6-2",res:"W",tourn:"Cincinnati",surface:"hard"}
+   ]},
+  {id:"zverev", name:"Alexander Zverev", country:"Allemagne", flag:"DE", tour:"ATP", rank:3,
+   bio:"Grand serveur allemand au coup droit dévastateur, plusieurs fois finaliste en Grand Chelem sans avoir encore soulevé ce trophée.",
+   titles:24, slams:0, masters:6, weeksNo1:0,
+   palmares:[{name:"Masters (fin de saison)",count:2,years:"2018, 2021"}],
+   next:{tournament:"Masters 1000 de Shanghai",round:"2e tour",opponent:"G. Dimitrov",date:"vendredi",surface:"hard"},
+   results:[
+     {opp:"J. Sinner",score:"3-6 2-6",res:"L",tourn:"Open d'Australie",surface:"hard"},
+     {opp:"C. Alcaraz",score:"4-6 1-6",res:"L",tourn:"Rome",surface:"clay"}
+   ]},
+  {id:"tsitsipas", name:"Stefanos Tsitsipas", country:"Grèce", flag:"GR", tour:"ATP", rank:22,
+   bio:"Jeu porté vers l'avant avec un revers à une main parmi les plus spectaculaires du circuit actuel.",
+   titles:11, slams:0, masters:1, weeksNo1:0,
+   palmares:[{name:"ATP Finals",count:1,years:"2019"}],
+   next:{tournament:"Masters 1000 de Shanghai",round:"1er tour",opponent:"F. Cerundolo",date:"jeudi",surface:"hard"},
+   results:[{opp:"N. Djokovic",score:"4-6 6-7",res:"L",tourn:"Wimbledon",surface:"grass"}]},
+  {id:"swiatek", name:"Iga Swiatek", country:"Pologne", flag:"PL", tour:"WTA", rank:2,
+   bio:"Dominatrice sur terre battue avec un jeu offensif basé sur un lift très prononcé et un déplacement de très haut niveau.",
+   titles:22, slams:5, masters:8, weeksNo1:125,
+   palmares:[{name:"Roland-Garros",count:4,years:"2020, 2022, 2023, 2024"},{name:"US Open",count:1,years:"2022"}],
+   next:{tournament:"WTA 1000 Wuhan",round:"Quarts de finale",opponent:"À déterminer",date:"vendredi",surface:"hard"},
+   results:[
+     {opp:"A. Sabalenka",score:"6-2 6-3",res:"W",tourn:"Roland-Garros",surface:"clay"},
+     {opp:"C. Gauff",score:"1-6 3-6",res:"L",tourn:"US Open",surface:"hard"}
+   ]},
+  {id:"sabalenka", name:"Aryna Sabalenka", country:"Biélorussie", flag:"BY", tour:"WTA", rank:1,
+   bio:"Puissance de frappe parmi les plus impressionnantes du circuit féminin, capable de dicter l'échange dès le service.",
+   titles:19, slams:3, masters:5, weeksNo1:70,
+   palmares:[{name:"Open d'Australie",count:2,years:"2023, 2024"},{name:"US Open",count:1,years:"2024"}],
+   next:{tournament:"WTA 1000 Wuhan",round:"2e tour",opponent:"D. Kasatkina",date:"jeudi",surface:"hard"},
+   results:[
+     {opp:"C. Gauff",score:"6-3 6-4",res:"W",tourn:"US Open",surface:"hard"},
+     {opp:"I. Swiatek",score:"2-6 3-6",res:"L",tourn:"Roland-Garros",surface:"clay"}
+   ]},
+  {id:"gauff", name:"Coco Gauff", country:"États-Unis", flag:"US", tour:"WTA", rank:3,
+   bio:"Talent précoce du tennis américain, réputée pour sa vitesse de déplacement et une combativité rare pour son âge.",
+   titles:9, slams:2, masters:2, weeksNo1:0,
+   palmares:[{name:"US Open",count:1,years:"2023"},{name:"Roland-Garros",count:1,years:"2025"}],
+   next:{tournament:"WTA 1000 Wuhan",round:"1er tour",opponent:"E. Alexandrova",date:"mercredi",surface:"hard"},
+   results:[
+     {opp:"A. Sabalenka",score:"3-6 4-6",res:"L",tourn:"US Open",surface:"hard"},
+     {opp:"I. Swiatek",score:"6-1 6-3",res:"W",tourn:"US Open",surface:"hard"}
+   ]},
+  {id:"rybakina", name:"Elena Rybakina", country:"Kazakhstan", flag:"KZ", tour:"WTA", rank:8,
+   bio:"Service parmi les plus lourds du circuit féminin, à l'aise sur toutes les surfaces avec un jeu très porté vers l'attaque.",
+   titles:9, slams:1, masters:2, weeksNo1:0,
+   palmares:[{name:"Wimbledon",count:1,years:"2022"}],
+   next:{tournament:"WTA 1000 Wuhan",round:"2e tour",opponent:"M. Vondrousova",date:"jeudi",surface:"hard"},
+   results:[{opp:"A. Sabalenka",score:"6-4 3-6 4-6",res:"L",tourn:"Wimbledon",surface:"grass"}]},
+  {id:"osaka", name:"Naomi Osaka", country:"Japon", flag:"JP", tour:"WTA", rank:19,
+   bio:"Quadruple lauréate en Grand Chelem, connue pour la puissance de son coup droit et un mental forgé dans les grands rendez-vous.",
+   titles:7, slams:4, masters:1, weeksNo1:25,
+   palmares:[{name:"US Open",count:2,years:"2018, 2020"},{name:"Open d'Australie",count:2,years:"2019, 2021"}],
+   next:{tournament:"WTA 1000 Wuhan",round:"1er tour",opponent:"L. Noskova",date:"mercredi",surface:"hard"},
+   results:[{opp:"C. Gauff",score:"4-6 6-3 3-6",res:"L",tourn:"Miami",surface:"hard"}]},
+  {id:"raducanu", name:"Emma Raducanu", country:"Royaume-Uni", flag:"GB", tour:"WTA", rank:32,
+   bio:"Révélation de l'US Open 2021 remporté depuis les qualifications, cherchant depuis à retrouver ce niveau de régularité.",
+   titles:1, slams:1, masters:0, weeksNo1:0,
+   palmares:[{name:"US Open",count:1,years:"2021"}],
+   next:{tournament:"WTA 1000 Wuhan",round:"1er tour",opponent:"Q. Zheng",date:"mercredi",surface:"hard"},
+   results:[{opp:"C. Gauff",score:"2-6 4-6",res:"L",tourn:"Wimbledon",surface:"grass"}]},
+  {id:"murray", name:"Andy Murray", country:"Royaume-Uni", flag:"GB", tour:"ATP", rank:null,
+   bio:"Premier Britannique à remporter Wimbledon depuis 1936, salué pour sa ténacité défensive et son intelligence tactique.",
+   titles:46, slams:3, masters:14, weeksNo1:41,
+   palmares:[{name:"Wimbledon",count:2,years:"2013, 2016"},{name:"US Open",count:1,years:"2012"}],
+   next:null,
+   results:[{opp:"N. Djokovic",score:"4-6 3-6",res:"L",tourn:"Jeux Olympiques",surface:"clay"}]}
+];
+
+const STORE_KEY = "favorites";
+let favorites = [];
+let currentQuery = "";
+
+// ---------- Utilitaires ----------
+function initials(name){
+  return name.split(" ").map(p=>p[0]).join("").slice(0,2).toUpperCase();
+}
+function tourClass(tour){ return tour === "ATP" ? "tour-atp" : "tour-wta"; }
+
+function surfaceLabel(s){
+  return {clay:"Terre battue",grass:"Gazon",hard:"Dur"}[s] || s;
+}
+
+async function loadFavorites(){
+  try{
+    const res = await window.storage.get(STORE_KEY);
+    favorites = res && res.value ? JSON.parse(res.value) : [];
+  }catch(e){
+    favorites = [];
+  }
+}
+async function saveFavorites(){
+  try{
+    await window.storage.set(STORE_KEY, JSON.stringify(favorites));
+  }catch(e){
+    console.error("Impossible d'enregistrer les favoris", e);
+  }
+}
+function isFav(id){ return favorites.includes(id); }
+async function toggleFav(id){
+  if(isFav(id)) favorites = favorites.filter(f=>f!==id);
+  else favorites.push(id);
+  await saveFavorites();
+  renderList();
+  if(document.getElementById("profileView").classList.contains("open")){
+    renderProfile(id);
+  }
+}
+
+// ---------- Rendu liste ----------
+function renderFavStrip(){
+  const el = document.getElementById("favSection");
+  if(favorites.length === 0){ el.innerHTML = ""; return; }
+  const favPlayers = favorites.map(id=>PLAYERS.find(p=>p.id===id)).filter(Boolean);
+  el.innerHTML = `
+    <p class="section-label">Favoris</p>
+    <div class="fav-strip">
+      ${favPlayers.map(p=>`
+        <div class="fav-chip" data-id="${p.id}">
+          <div class="avatar mini-avatar ${tourClass(p.tour)}">${initials(p.name)}</div>
+          <span>${p.name}</span>
+          <span class="next">${p.next ? "· prochain match " + p.next.date : "· pas de match prévu"}</span>
+        </div>`).join("")}
+    </div>
+  `;
+  el.querySelectorAll(".fav-chip").forEach(chip=>{
+    chip.addEventListener("click", ()=> openProfile(chip.dataset.id));
+  });
+}
+
+function renderList(){
+  renderFavStrip();
+  const listEl = document.getElementById("playerList");
+  const labelEl = document.getElementById("listLabel");
+  const q = currentQuery.trim().toLowerCase();
+  const filtered = q
+    ? PLAYERS.filter(p => p.name.toLowerCase().includes(q) || p.country.toLowerCase().includes(q))
+    : PLAYERS;
+
+  labelEl.textContent = q ? `Résultats pour « ${currentQuery} »` : "Tous les joueurs";
+
+  if(filtered.length === 0){
+    listEl.innerHTML = `<p class="no-results">Aucun joueur ne correspond à cette recherche.</p>`;
+    return;
+  }
+
+  listEl.innerHTML = filtered.map(p=>`
+    <div class="player-row" data-id="${p.id}">
+      <div class="rank display">${p.rank ? "#"+p.rank : "—"}</div>
+      <div class="avatar ${tourClass(p.tour)}">${initials(p.name)}</div>
+      <div class="info">
+        <p class="name">${p.name}</p>
+        <p class="meta">${p.country} · ${p.tour} · ${p.slams} titre${p.slams>1?"s":""} du Grand Chelem</p>
+      </div>
+      <button class="star-btn ${isFav(p.id)?"active":""}" data-id="${p.id}" aria-label="Ajouter aux favoris">${isFav(p.id)?"★":"☆"}</button>
+    </div>
+  `).join("");
+
+  listEl.querySelectorAll(".player-row").forEach(row=>{
+    row.addEventListener("click", (e)=>{
+      if(e.target.classList.contains("star-btn")) return;
+      openProfile(row.dataset.id);
+    });
+  });
+  listEl.querySelectorAll(".star-btn").forEach(btn=>{
+    btn.addEventListener("click", (e)=>{
+      e.stopPropagation();
+      toggleFav(btn.dataset.id);
+    });
+  });
+}
+
+// ---------- Rendu profil ----------
+function renderProfile(id){
+  const p = PLAYERS.find(pl=>pl.id===id);
+  if(!p) return;
+  const el = document.getElementById("profileContent");
+
+  const nextHtml = p.next ? `
+    <div class="next-match">
+      <div class="tag display">Prochain match</div>
+      <p class="line1">${p.opponentLine || ("vs " + p.next.opponent)}</p>
+      <p class="line2">${p.next.tournament} · ${p.next.round} · ${surfaceLabel(p.next.surface)} · ${p.next.date}</p>
+    </div>
+  ` : `
+    <div class="next-match" style="border-left-color: var(--line);">
+      <div class="tag display" style="color:var(--chalk-dim);">Prochain match</div>
+      <p class="line1">Aucun match prévu pour l'instant</p>
+    </div>
+  `;
+
+  el.innerHTML = `
+    <div class="profile-head">
+      <div class="avatar-lg ${tourClass(p.tour)}">${initials(p.name)}</div>
+      <div class="who">
+        <h2>${p.name}</h2>
+        <p class="sub">${p.country} · ${p.tour}${p.rank ? " · N°"+p.rank+" mondial" : ""}</p>
+      </div>
+      <button class="fav-toggle ${isFav(p.id)?"active":""}" id="profFavBtn">${isFav(p.id)?"★ Favori":"☆ Ajouter"}</button>
+    </div>
+
+    <p class="bio">${p.bio}</p>
+
+    <div class="stat-grid">
+      <div class="stat-cell"><div class="num display">${p.titles}</div><div class="lbl">Titres carrière</div></div>
+      <div class="stat-cell"><div class="num display">${p.slams}</div><div class="lbl">Grand Chelem</div></div>
+      <div class="stat-cell"><div class="num display">${p.masters}</div><div class="lbl">Masters 1000 / WTA 1000</div></div>
+      <div class="stat-cell"><div class="num display">${p.weeksNo1}</div><div class="lbl">Semaines n°1</div></div>
+    </div>
+
+    ${nextHtml}
+
+    <p class="section-label">Derniers résultats</p>
+    <div class="results-list">
+      ${p.results.map(r=>`
+        <div class="res-row">
+          <span class="dot ${r.surface}"></span>
+          <span class="wl ${r.res==='W'?'w':'l'}">${r.res}</span>
+          <span class="opp"><span class="vs">vs</span> ${r.opp}</span>
+          <span class="score display">${r.score}</span>
+          <span class="tourn">${r.tourn}</span>
+        </div>
+      `).join("")}
+    </div>
+
+    <p class="section-label" style="margin-top:30px;">Palmarès en Grand Chelem</p>
+    <div class="trophy-list">
+      ${p.palmares.length ? p.palmares.map(t=>`
+        <div class="trophy-row">
+          <span>${t.name}</span>
+          <span>${t.count}× <span class="yrs">(${t.years})</span></span>
+        </div>
+      `).join("") : `<p class="empty-note">Pas encore de titre du Grand Chelem.</p>`}
+    </div>
+  `;
+
+  document.getElementById("profFavBtn").addEventListener("click", ()=> toggleFav(p.id));
+}
+
+function openProfile(id){
+  renderProfile(id);
+  document.getElementById("listView").classList.add("hidden");
+  document.getElementById("profileView").classList.add("open");
+  window.scrollTo(0,0);
+}
+function closeProfile(){
+  document.getElementById("profileView").classList.remove("open");
+  document.getElementById("listView").classList.remove("hidden");
+  renderList();
+}
+
+// ---------- Init ----------
+document.getElementById("searchInput").addEventListener("input", (e)=>{
+  currentQuery = e.target.value;
+  renderList();
+});
+document.getElementById("backBtn").addEventListener("click", closeProfile);
+
+(async function init(){
+  await loadFavorites();
+  renderList();
+})();
+</script>
+</body>
+</html>
