@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#0b1013" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="data.js" defer></script>
+    <script src="app.js" defer></script>
+    <title>Tennispedia · Accueil</title>
+  </head>
+  <body data-page="accueil" class="avec-onglets">
+    <header class="entete">
+      <span class="point"></span>
+      <h1 class="logo">TENNIS<span>PEDIA</span></h1>
+    </header>
+    <nav class="recherche" aria-label="Recherche">
+      <form role="search">
+        <label class="cache" for="recherche">Chercher un joueur ou une joueuse</label>
+        <svg class="icone loupe" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="11" cy="11" r="7" />
+          <path d="m20 20-3.5-3.5" />
+        </svg>
+        <input
+          id="recherche"
+          type="search"
+          placeholder="Chercher un joueur ou une joueuse"
+          autocomplete="off"
+        />
+      </form>
+    </nav>
+    <main class="ecran">
+      <h2 class="etiquette">Populaires cette semaine</h2>
+      <ol class="classement" id="liste"></ol>
+      <p class="vide" id="aucun" hidden>Aucun joueur ne correspond à votre recherche.</p>
+    </main>
+    <footer class="pied"><p>© 2026 — Votre prénom</p></footer>
+    <nav class="onglets" id="onglets" aria-label="Navigation principale"></nav>
+  </body>
+</html>
