@@ -1,0 +1,1932 @@
+[
+  {
+    "id": "carlos",
+    "nom": "Carlos Alcaraz",
+    "initiales": "CA",
+    "teinte": "bleu",
+    "pays": "Espagne",
+    "rang": 3,
+    "feminin": false,
+    "age": 23,
+    "main": "Droitier",
+    "resume": "Joueur espagnol complet et spectaculaire, qui mélange puissance, amorties et vitesse sur toutes les surfaces.",
+    "carriere": {
+      "titres": "28",
+      "finales": "37",
+      "meilleurRang": "1<sup>er</sup> mondial"
+    },
+    "trophees": [
+      {
+        "titre": "Roland-Garros",
+        "detail": "2024 et 2025",
+        "nombre": 2
+      },
+      {
+        "titre": "Wimbledon",
+        "detail": "2023 et 2024",
+        "nombre": 2
+      },
+      {
+        "titre": "US Open",
+        "detail": "2022 et 2025",
+        "nombre": 2
+      }
+    ],
+    "derniersMatchs": [
+      {
+        "victoire": false,
+        "adversaire": "Zizou Bergs",
+        "infos": "Shanghai · huitième de finale · 7 oct. · Dur",
+        "score": "6-7(4), 3-6"
+      },
+      {
+        "victoire": true,
+        "adversaire": "Learner Tien",
+        "infos": "Shanghai · 3e tour · 5 oct. · Dur",
+        "score": "6-3, 7-5"
+      },
+      {
+        "victoire": true,
+        "adversaire": "Arthur Rinderknech",
+        "infos": "Shanghai · 2e tour · 4 oct. · Dur",
+        "score": "6-4, 6-2"
+      },
+      {
+        "victoire": true,
+        "adversaire": "Jakub Mensik",
+        "infos": "Pékin · finale · 1 oct. · Dur",
+        "score": "6-4, 6-3"
+      },
+      {
+        "victoire": true,
+        "adversaire": "Daniil Medvedev",
+        "infos": "Pékin · demi-finale · 30 sept. · Dur",
+        "score": "6-4, 7-6(4)"
+      }
+    ]
+  },
+  {
+    "id": "zverev",
+    "nom": "Alexander Zverev",
+    "initiales": "AZ",
+    "teinte": "bleu",
+    "pays": "Allemagne",
+    "rang": 2,
+    "feminin": false,
+    "age": 29,
+    "main": "Droitier",
+    "resume": "Grand serveur, revers puissant et très bon joueur de fond de court.",
+    "carriere": {
+      "titres": "26",
+      "finales": "44",
+      "meilleurRang": "2<sup>e</sup> mondial"
+    },
+    "trophees": [
+      {
+        "titre": "Roland-Garros",
+        "detail": "2026"
+      },
+      {
+        "titre": "US Open",
+        "detail": "2026"
+      },
+      {
+        "titre": "Jeux olympiques de Tokyo",
+        "detail": "Médaille d'or en simple"
+      },
+      {
+        "titre": "Nitto ATP Finals",
+        "detail": "2018 et 2021",
+        "nombre": 2
+      }
+    ],
+    "derniersMatchs": [
+      {
+        "victoire": false,
+        "adversaire": "Alejandro Davidovich Fokina",
+        "infos": "Shanghai · demi-finale · 7 oct. · Dur",
+        "score": "7-5, 4-6, 3-6"
+      },
+      {
+        "victoire": true,
+        "adversaire": "Alex de Minaur",
+        "infos": "Shanghai · quart de finale · 7 oct. · Dur",
+        "score": "6-4, 6-4"
+      },
+      {
+        "victoire": true,
+        "adversaire": "Alexander Bublik",
+        "infos": "Shanghai · huitième de finale · 7 oct. · Dur",
+        "score": "7-6(6), 4-6, 7-6(1)"
+      },
+      {
+        "victoire": true,
+        "adversaire": "Quentin Halys",
+        "infos": "Shanghai · 3e tour · 7 oct. · Dur",
+        "score": "6-4, 6-7(8), 6-3"
+      },
+      {
+        "victoire": true,
+        "adversaire": "Yibing Wu",
+        "infos": "Shanghai · 2e tour · 7 oct. · Dur",
+        "score": "6-4, 7-6(4)"
+      }
+    ]
+  },
+  {
+    "id": "sinner",
+    "nom": "Jannik Sinner",
+    "initiales": "JS",
+    "teinte": "orange",
+    "pays": "Italie",
+    "rang": 1,
+    "feminin": false,
+    "age": 25,
+    "main": "Droitier",
+    "resume": "Joueur italien au jeu de fond de court très précis et très régulier, qui frappe fort des deux côtés.",
+    "carriere": {
+      "titres": "35",
+      "finales": "45",
+      "meilleurRang": "1<sup>er</sup> mondial"
+    },
+    "trophees": [
+      {
+        "titre": "Open d'Australie",
+        "detail": "2024 et 2025",
+        "nombre": 2
+      },
+      {
+        "titre": "Wimbledon",
+        "detail": "2025 et 2026",
+        "nombre": 2
+      },
+      {
+        "titre": "US Open",
+        "detail": "2024"
+      },
+      {
+        "titre": "Nitto ATP Finals",
+        "detail": "2024 et 2025",
+        "nombre": 2
+      }
+    ],
+    "derniersMatchs": [
+      {
+        "victoire": true,
+        "adversaire": "Alexander Zverev",
+        "infos": "Wimbledon · finale · 12 juil. · Gazon",
+        "score": "6-4, 6-4, 6-7(3), 6-3"
+      },
+      {
+        "victoire": true,
+        "adversaire": "Novak Djokovic",
+        "infos": "Wimbledon · demi-finale · 10 juil. · Gazon",
+        "score": "6-3, 7-6(5), 6-4"
+      },
+      {
+        "victoire": true,
+        "adversaire": "Lorenzo Musetti",
+        "infos": "Wimbledon · quart de finale · 8 juil. · Gazon",
+        "score": "6-4, 6-2, 6-4"
+      },
+      {
+        "victoire": true,
+        "adversaire": "Alexei Popyrin",
+        "infos": "Wimbledon · huitième de finale · 6 juil. · Gazon",
+        "score": "6-1, 6-3, 6-4"
+      },
+      {
+        "victoire": true,
+        "adversaire": "Brandon Nakashima",
+        "infos": "Wimbledon · 3e tour · 4 juil. · Gazon",
+        "score": "6-3, 6-4, 6-4"
+      }
+    ]
+  },
+  {
+    "id": "shelton",
+    "nom": "Ben Shelton",
+    "initiales": "BS",
+    "teinte": "rouge",
+    "pays": "États-Unis",
+    "rang": 4,
+    "feminin": false,
+    "age": 24,
+    "main": "Gaucher",
+    "resume": "Gaucher américain au service très puissant et au coup droit explosif, connu pour son énergie et ses célébrations.",
+    "carriere": {
+      "titres": "7",
+      "finales": "10",
+      "meilleurRang": "4<sup>e</sup> mondial"
+    },
+    "trophees": [
+      {
+        "titre": "Masters 1000 de Toronto",
+        "detail": "2025"
+      }
+    ],
+    "derniersMatchs": [
+      {
+        "victoire": false,
+        "adversaire": "Alejandro Davidovich Fokina",
+        "infos": "Shanghai · quart de finale · 8 oct. · Dur",
+        "score": "4-6, 6-7(4)"
+      },
+      {
+        "victoire": true,
+        "adversaire": "Taylor Fritz",
+        "infos": "Shanghai · huitième de finale · 6 oct. · Dur",
+        "score": "7-6(5), 6-4"
+      },
+      {
+        "victoire": true,
+        "adversaire": "Alex Michelsen",
+        "infos": "Shanghai · 3e tour · 5 oct. · Dur",
+        "score": "6-4, 6-3"
+      },
+      {
+        "victoire": false,
+        "adversaire": "Alexander Zverev",
+        "infos": "US Open · finale · 13 sept. · Dur",
+        "score": "4-6, 6-7(5), 3-6"
+      },
+      {
+        "victoire": true,
+        "adversaire": "Frances Tiafoe",
+        "infos": "US Open · demi-finale · 11 sept. · Dur",
+        "score": "6-4, 6-7(3), 7-6(5), 6-3"
+      }
+    ]
+  },
+  {
+    "id": "medvedev",
+    "nom": "Daniil Medvedev",
+    "initiales": "DM",
+    "teinte": "ardoise",
+    "pays": "Russie",
+    "rang": 6,
+    "feminin": false,
+    "age": 30,
+    "main": "Droitier",
+    "resume": "Joueur russe au style atypique, très solide en défense et excellent sur dur, difficile à déstabiliser.",
+    "carriere": {
+      "titres": "25",
+      "finales": "45",
+      "meilleurRang": "1<sup>er</sup> mondial"
+    },
+    "trophees": [
+      {
+        "titre": "US Open",
+        "detail": "2021"
+      },
+      {
+        "titre": "Nitto ATP Finals",
+        "detail": "2020"
+      },
+      {
+        "titre": "Masters 1000 de Shanghai",
+        "detail": "2019"
+      }
+    ],
+    "derniersMatchs": [
+      {
+        "victoire": false,
+        "adversaire": "Jakub Mensik",
+        "infos": "Shanghai · huitième de finale · 7 oct. · Dur",
+        "score": "6-7(5), 4-6"
+      },
+      {
+        "victoire": true,
+        "adversaire": "Francisco Cerundolo",
+        "infos": "Shanghai · 3e tour · 5 oct. · Dur",
+        "score": "6-3, 6-4"
+      },
+      {
+        "victoire": true,
+        "adversaire": "Hubert Hurkacz",
+        "infos": "Shanghai · 2e tour · 3 oct. · Dur",
+        "score": "7-6(4), 6-4"
+      },
+      {
+        "victoire": false,
+        "adversaire": "Carlos Alcaraz",
+        "infos": "Pékin · demi-finale · 30 sept. · Dur",
+        "score": "4-6, 6-7(4)"
+      },
+      {
+        "victoire": true,
+        "adversaire": "Tommy Paul",
+        "infos": "Pékin · quart de finale · 29 sept. · Dur",
+        "score": "6-4, 3-6, 6-4"
+      }
+    ]
+  },
+  {
+    "id": "cobolli",
+    "nom": "Flavio Cobolli",
+    "initiales": "FC",
+    "teinte": "violet",
+    "pays": "Italie",
+    "rang": 7,
+    "feminin": false,
+    "age": 24,
+    "main": "Droitier",
+    "resume": "Joueur italien combatif, à l'aise sur toutes les surfaces, avec un très bon coup droit.",
+    "carriere": {
+      "titres": "3",
+      "finales": "8",
+      "meilleurRang": "7<sup>e</sup> mondial"
+    },
+    "trophees": [
+      {
+        "titre": "Tournoi de Bucarest",
+        "detail": "2024"
+      },
+      {
+        "titre": "Tournoi de Hambourg",
+        "detail": "2025"
+      }
+    ],
+    "derniersMatchs": [
+      {
+        "victoire": false,
+        "adversaire": "Frances Tiafoe",
+        "infos": "Shanghai · huitième de finale · 7 oct. · Dur",
+        "score": "6-7(4), 6-4, 4-6"
+      },
+      {
+        "victoire": true,
+        "adversaire": "Novak Djokovic",
+        "infos": "Shanghai · 3e tour · 5 oct. · Dur",
+        "score": "7-6(5), 6-4"
+      },
+      {
+        "victoire": true,
+        "adversaire": "Stan Wawrinka",
+        "infos": "Shanghai · 2e tour · 3 oct. · Dur",
+        "score": "6-3, 6-4"
+      },
+      {
+        "victoire": false,
+        "adversaire": "Taylor Fritz",
+        "infos": "Pékin · quart de finale · 29 sept. · Dur",
+        "score": "5-7, 4-6"
+      },
+      {
+        "victoire": true,
+        "adversaire": "Karen Khachanov",
+        "infos": "Pékin · huitième de finale · 28 sept. · Dur",
+        "score": "6-4, 7-5"
+      }
+    ]
+  },
+  {
+    "id": "auger",
+    "nom": "Félix Auger-Aliassime",
+    "initiales": "FA",
+    "teinte": "orange",
+    "pays": "Canada",
+    "rang": 5,
+    "feminin": false,
+    "age": 26,
+    "main": "Droitier",
+    "resume": "Joueur canadien au service puissant et au jeu offensif, devenu très régulier dans le top 10.",
+    "carriere": {
+      "titres": 9,
+      "finales": 22,
+      "meilleurRang": "5<sup>e</sup> mondial"
+    },
+    "trophees": [
+      {
+        "titre": "Tournoi de Rotterdam",
+        "detail": "2022"
+      },
+      {
+        "titre": "Open de Bâle",
+        "detail": "2022"
+      }
+    ],
+    "derniersMatchs": [
+      {
+        "victoire": false,
+        "adversaire": "Taylor Fritz",
+        "infos": "Shanghai · demi-finale · 10 oct. · Dur",
+        "score": "6-7(4), 4-6"
+      },
+      {
+        "victoire": true,
+        "adversaire": "Frances Tiafoe",
+        "infos": "Shanghai · quart de finale · 8 oct. · Dur",
+        "score": "7-6(5), 6-3"
+      },
+      {
+        "victoire": true,
+        "adversaire": "Joao Fonseca",
+        "infos": "Shanghai · huitième de finale · 7 oct. · Dur",
+        "score": "6-4, 7-6(3)"
+      },
+      {
+        "victoire": true,
+        "adversaire": "Luciano Darderi",
+        "infos": "Shanghai · 3e tour · 5 oct. · Dur",
+        "score": "6-3, 6-4"
+      },
+      {
+        "victoire": true,
+        "adversaire": "Arthur Fery",
+        "infos": "Shanghai · 2e tour · 3 oct. · Dur",
+        "score": "6-4, 6-4"
+      }
+    ]
+  },
+  {
+    "id": "fils",
+    "nom": "Arthur Fils",
+    "initiales": "AF",
+    "teinte": "rouge",
+    "pays": "France",
+    "rang": 11,
+    "feminin": false,
+    "age": 22,
+    "main": "Droitier",
+    "resume": "Jeune Français explosif, au coup droit très lourd et au jeu agressif.",
+    "carriere": {
+      "titres": 5,
+      "finales": 8,
+      "meilleurRang": "11<sup>e</sup> mondial",
+      "estime": true
+    },
+    "trophees": [
+      {
+        "titre": "Masters 1000 de Cincinnati",
+        "detail": "2026"
+      }
+    ],
+    "derniersMatchs": [
+      {
+        "victoire": false,
+        "adversaire": "Alex Michelsen",
+        "infos": "Shanghai · 2e tour · 3 oct. · Dur",
+        "score": "6-7(5), 6-7(4)"
+      },
+      {
+        "victoire": true,
+        "adversaire": "Cameron Norrie",
+        "infos": "Pékin · 1er tour · 27 sept. · Dur",
+        "score": "6-4, 6-3"
+      },
+      {
+        "victoire": false,
+        "adversaire": "Learner Tien",
+        "infos": "US Open · 4e tour · 7 sept. · Dur",
+        "score": "6-7(3), 4-6, 6-3, 5-7"
+      },
+      {
+        "victoire": true,
+        "adversaire": "Valentin Vacherot",
+        "infos": "US Open · 3e tour · 5 sept. · Dur",
+        "score": "6-3, 6-4, 7-6(4)"
+      },
+      {
+        "victoire": true,
+        "adversaire": "Arthur Rinderknech",
+        "infos": "US Open · 2e tour · 3 sept. · Dur",
+        "score": "7-6(5), 6-4, 6-2"
+      }
+    ]
+  },
+  {
+    "id": "tiafoe",
+    "nom": "Frances Tiafoe",
+    "initiales": "FT",
+    "teinte": "bleu",
+    "pays": "États-Unis",
+    "rang": 8,
+    "feminin": false,
+    "age": 28,
+    "main": "Droitier",
+    "resume": "Joueur américain spectaculaire et imprévisible, avec un jeu d'attaque qui enflamme le public.",
+    "carriere": {
+      "titres": 4,
+      "finales": 8,
+      "meilleurRang": "8<sup>e</sup> mondial",
+      "estime": true
+    },
+    "trophees": [
+      {
+        "titre": "Tournoi de Delray Beach",
+        "detail": "2018"
+      },
+      {
+        "titre": "Tournoi de Stuttgart",
+        "detail": "2022"
+      }
+    ],
+    "derniersMatchs": [
+      {
+        "victoire": false,
+        "adversaire": "Félix Auger-Aliassime",
+        "infos": "Shanghai · quart de finale · 8 oct. · Dur",
+        "score": "6-7(5), 3-6"
+      },
+      {
+        "victoire": true,
+        "adversaire": "Flavio Cobolli",
+        "infos": "Shanghai · huitième de finale · 7 oct. · Dur",
+        "score": "7-6(4), 4-6, 6-4"
+      },
+      {
+        "victoire": true,
+        "adversaire": "Roman Safiullin",
+        "infos": "Shanghai · 3e tour · 5 oct. · Dur",
+        "score": "6-4, 6-4"
+      },
+      {
+        "victoire": false,
+        "adversaire": "Ben Shelton",
+        "infos": "US Open · demi-finale · 11 sept. · Dur",
+        "score": "4-6, 7-6(3), 6-7(5), 3-6"
+      },
+      {
+        "victoire": true,
+        "adversaire": "Jakub Mensik",
+        "infos": "US Open · quart de finale · 9 sept. · Dur",
+        "score": "7-6(4), 6-3, 6-4"
+      }
+    ]
+  },
+  {
+    "id": "deminaur",
+    "nom": "Alex de Minaur",
+    "initiales": "AM",
+    "teinte": "violet",
+    "pays": "Australie",
+    "rang": 9,
+    "feminin": false,
+    "age": 27,
+    "main": "Droitier",
+    "resume": "Joueur australien très rapide, qui court après toutes les balles et ne lâche jamais rien.",
+    "carriere": {
+      "titres": 9,
+      "finales": 17,
+      "meilleurRang": "6<sup>e</sup> mondial",
+      "estime": true
+    },
+    "trophees": [
+      {
+        "titre": "Tournoi de Sydney",
+        "detail": "2019"
+      },
+      {
+        "titre": "Tournoi d'Atlanta",
+        "detail": "2019"
+      },
+      {
+        "titre": "Tournoi d'Acapulco",
+        "detail": "2024"
+      }
+    ],
+    "derniersMatchs": [
+      {
+        "victoire": false,
+        "adversaire": "Alexander Zverev",
+        "infos": "Shanghai · quart de finale · 7 oct. · Dur",
+        "score": "4-6, 4-6"
+      },
+      {
+        "victoire": true,
+        "adversaire": "Brandon Nakashima",
+        "infos": "Shanghai · huitième de finale · 6 oct. · Dur",
+        "score": "6-3, 7-6(5)"
+      },
+      {
+        "victoire": true,
+        "adversaire": "Alexei Popyrin",
+        "infos": "Shanghai · 3e tour · 4 oct. · Dur",
+        "score": "6-2, 6-4"
+      },
+      {
+        "victoire": true,
+        "adversaire": "Tomas Martin Etcheverry",
+        "infos": "Shanghai · 2e tour · 3 oct. · Dur",
+        "score": "6-4, 6-3"
+      },
+      {
+        "victoire": false,
+        "adversaire": "Jakub Mensik",
+        "infos": "Pékin · quart de finale · 29 sept. · Dur",
+        "score": "6-7(4), 3-6"
+      }
+    ]
+  },
+  {
+    "id": "federer",
+    "nom": "Roger Federer",
+    "initiales": "RF",
+    "teinte": "rouge",
+    "pays": "Suisse",
+    "rang": 0,
+    "feminin": false,
+    "age": 45,
+    "main": "Droitier",
+    "resume": "Légende suisse au jeu fluide et élégant, avec un service, un coup droit et un revers à une main d'une grande élégance.",
+    "carriere": {
+      "titres": "103",
+      "finales": "157",
+      "meilleurRang": "1<sup>er</sup> mondial"
+    },
+    "trophees": [
+      {
+        "titre": "Open d'Australie",
+        "detail": "2004, 2006, 2007, 2010, 2017 et 2018",
+        "nombre": 6
+      },
+      {
+        "titre": "Roland-Garros",
+        "detail": "2009"
+      },
+      {
+        "titre": "Wimbledon",
+        "detail": "2003 à 2007, 2009, 2012 et 2017",
+        "nombre": 8
+      },
+      {
+        "titre": "US Open",
+        "detail": "2004 à 2008",
+        "nombre": 5
+      },
+      {
+        "titre": "Nitto ATP Finals",
+        "detail": "6 titres",
+        "nombre": 6
+      }
+    ],
+    "derniersMatchs": [
+      {
+        "victoire": false,
+        "adversaire": "Hubert Hurkacz",
+        "infos": "Wimbledon · quart de finale · 7 juil. 2021 · Gazon",
+        "score": "3-6, 6-7(4), 0-6"
+      },
+      {
+        "victoire": true,
+        "adversaire": "Lorenzo Sonego",
+        "infos": "Wimbledon · huitième de finale · 5 juil. 2021 · Gazon",
+        "score": "7-5, 6-4, 6-2"
+      }
+    ]
+  },
+  {
+    "id": "nadal",
+    "nom": "Rafael Nadal",
+    "initiales": "RN",
+    "teinte": "orange",
+    "pays": "Espagne",
+    "rang": 0,
+    "feminin": false,
+    "age": 40,
+    "main": "Gaucher",
+    "resume": "Légende espagnole, roi de la terre battue, connu pour son coup droit très lourd, son énergie et sa combativité.",
+    "carriere": {
+      "titres": "92",
+      "finales": "130",
+      "meilleurRang": "1<sup>er</sup> mondial"
+    },
+    "trophees": [
+      {
+        "titre": "Roland-Garros",
+        "detail": "14 titres entre 2005 et 2022",
+        "nombre": 14
+      },
+      {
+        "titre": "Open d'Australie",
+        "detail": "2009 et 2022",
+        "nombre": 2
+      },
+      {
+        "titre": "Wimbledon",
+        "detail": "2008 et 2010",
+        "nombre": 2
+      },
+      {
+        "titre": "US Open",
+        "detail": "2010, 2013, 2017 et 2019",
+        "nombre": 4
+      },
+      {
+        "titre": "Jeux olympiques de Pékin",
+        "detail": "Médaille d'or en simple"
+      }
+    ],
+    "derniersMatchs": [
+      {
+        "victoire": false,
+        "adversaire": "Botic van de Zandschulp",
+        "infos": "Coupe Davis · quart de finale · 19 nov. 2024 · Dur",
+        "score": "4-6, 4-6"
+      },
+      {
+        "victoire": false,
+        "adversaire": "Alexander Zverev",
+        "infos": "Roland-Garros · 1er tour · 27 mai 2024 · Terre battue",
+        "score": "3-6, 6-7(5), 3-6"
+      }
+    ]
+  },
+  {
+    "id": "djokovic",
+    "nom": "Novak Djokovic",
+    "initiales": "ND",
+    "teinte": "bleu",
+    "pays": "Serbie",
+    "rang": 10,
+    "feminin": false,
+    "age": 39,
+    "main": "Droitier",
+    "resume": "Joueur serbe d'une régularité exceptionnelle, meilleur relanceur de l'histoire et très souple, redoutable sur toutes les surfaces.",
+    "carriere": {
+      "titres": 101,
+      "finales": 152,
+      "meilleurRang": "1<sup>er</sup> mondial",
+      "estime": true
+    },
+    "trophees": [
+      {
+        "titre": "Open d'Australie",
+        "detail": "10 titres entre 2008 et 2023",
+        "nombre": 10
+      },
+      {
+        "titre": "Roland-Garros",
+        "detail": "2016, 2021 et 2023",
+        "nombre": 3
+      },
+      {
+        "titre": "Wimbledon",
+        "detail": "7 titres entre 2011 et 2022",
+        "nombre": 7
+      },
+      {
+        "titre": "US Open",
+        "detail": "2011, 2015, 2018 et 2023",
+        "nombre": 4
+      },
+      {
+        "titre": "Jeux olympiques de Paris",
+        "detail": "Médaille d'or en simple"
+      }
+    ],
+    "derniersMatchs": [
+      {
+        "victoire": false,
+        "adversaire": "Flavio Cobolli",
+        "infos": "Shanghai · 3e tour · 5 oct. · Dur",
+        "score": "6-7(5), 4-6"
+      },
+      {
+        "victoire": false,
+        "adversaire": "Jannik Sinner",
+        "infos": "Wimbledon · demi-finale · 10 juil. · Gazon",
+        "score": "3-6, 6-7(5), 4-6"
+      }
+    ]
+  },
+  {
+    "id": "wawrinka",
+    "nom": "Stan Wawrinka",
+    "initiales": "SW",
+    "teinte": "violet",
+    "pays": "Suisse",
+    "rang": 0,
+    "feminin": false,
+    "age": 41,
+    "main": "Droitier",
+    "resume": "Joueur suisse au revers à une main spectaculaire et à la frappe très puissante, redoutable dans les grands rendez-vous.",
+    "carriere": {
+      "titres": 16,
+      "finales": 25,
+      "meilleurRang": "3<sup>e</sup> mondial",
+      "estime": true
+    },
+    "trophees": [
+      {
+        "titre": "Open d'Australie",
+        "detail": "2014"
+      },
+      {
+        "titre": "Roland-Garros",
+        "detail": "2015"
+      },
+      {
+        "titre": "US Open",
+        "detail": "2016"
+      },
+      {
+        "titre": "Jeux olympiques de Pékin",
+        "detail": "Médaille d'or en double"
+      }
+    ],
+    "derniersMatchs": [
+      {
+        "victoire": false,
+        "adversaire": "Flavio Cobolli",
+        "infos": "Shanghai · 2e tour · 3 oct. · Dur",
+        "score": "3-6, 4-6"
+      }
+    ]
+  },
+  {
+    "id": "sampras",
+    "nom": "Pete Sampras",
+    "initiales": "PS",
+    "teinte": "ardoise",
+    "pays": "États-Unis",
+    "rang": 0,
+    "feminin": false,
+    "age": 55,
+    "main": "Droitier",
+    "resume": "Légende américaine du service-volée, célèbre pour son service redoutable et son smash en suspension, roi de Wimbledon dans les années 1990.",
+    "carriere": {
+      "titres": "64",
+      "finales": 88,
+      "meilleurRang": "1<sup>er</sup> mondial",
+      "estime": true
+    },
+    "trophees": [
+      {
+        "titre": "Wimbledon",
+        "detail": "1993-1995 et 1997-2000",
+        "nombre": 7
+      },
+      {
+        "titre": "US Open",
+        "detail": "1990, 1993, 1995, 1996 et 2002",
+        "nombre": 5
+      },
+      {
+        "titre": "Open d'Australie",
+        "detail": "1994 et 1997",
+        "nombre": 2
+      },
+      {
+        "titre": "Nitto ATP Finals",
+        "detail": "5 titres",
+        "nombre": 5
+      }
+    ],
+    "derniersMatchs": [
+      {
+        "victoire": true,
+        "adversaire": "Andre Agassi",
+        "infos": "US Open · finale · 8 sept. 2002 · Dur",
+        "score": "6-3, 6-4, 5-7, 6-4"
+      }
+    ]
+  },
+  {
+    "id": "borg",
+    "nom": "Björn Borg",
+    "initiales": "BB",
+    "teinte": "bleu",
+    "pays": "Suède",
+    "rang": 0,
+    "feminin": false,
+    "age": 70,
+    "main": "Droitier",
+    "resume": "Légende suédoise au sang-froid légendaire, redoutable en fond de court avec son coup droit lifté, vainqueur à la fois à Roland-Garros et à Wimbledon.",
+    "carriere": {
+      "titres": "64",
+      "finales": 100,
+      "meilleurRang": "1<sup>er</sup> mondial",
+      "estime": true
+    },
+    "trophees": [
+      {
+        "titre": "Roland-Garros",
+        "detail": "1974, 1975, 1978, 1979, 1980 et 1981",
+        "nombre": 6
+      },
+      {
+        "titre": "Wimbledon",
+        "detail": "1976 à 1980",
+        "nombre": 5
+      }
+    ],
+    "derniersMatchs": [
+      {
+        "victoire": false,
+        "adversaire": "John McEnroe",
+        "infos": "US Open · finale · 13 sept. 1981 · Dur",
+        "score": "6-4, 2-6, 4-6, 3-6"
+      }
+    ]
+  },
+  {
+    "id": "laver",
+    "nom": "Rod Laver",
+    "initiales": "RL",
+    "teinte": "orange",
+    "pays": "Australie",
+    "rang": 0,
+    "feminin": false,
+    "age": 88,
+    "main": "Gaucher",
+    "resume": "Légende australienne, seul joueur à avoir réussi deux fois le Grand Chelem calendaire (1962 et 1969), au jeu complet et très créatif.",
+    "carriere": {
+      "titres": 200,
+      "finales": "—",
+      "meilleurRang": "1<sup>er</sup> mondial",
+      "estime": true
+    },
+    "trophees": [
+      {
+        "titre": "Open d'Australie",
+        "detail": "1960, 1962 et 1969",
+        "nombre": 3
+      },
+      {
+        "titre": "Roland-Garros",
+        "detail": "1962 et 1969",
+        "nombre": 2
+      },
+      {
+        "titre": "Wimbledon",
+        "detail": "1961, 1962, 1968 et 1969",
+        "nombre": 4
+      },
+      {
+        "titre": "US Open",
+        "detail": "1962 et 1969",
+        "nombre": 2
+      }
+    ],
+    "derniersMatchs": []
+  },
+  {
+    "id": "monfils",
+    "nom": "Gaël Monfils",
+    "initiales": "GM",
+    "teinte": "rouge",
+    "pays": "France",
+    "rang": 0,
+    "feminin": false,
+    "age": 40,
+    "main": "Droitier",
+    "resume": "Joueur français athlétique et spectaculaire, connu pour ses acrobaties, sa vitesse et son sens du show.",
+    "carriere": {
+      "titres": 13,
+      "finales": 26,
+      "meilleurRang": "6<sup>e</sup> mondial",
+      "estime": true
+    },
+    "trophees": [
+      {
+        "titre": "Tournoi de Stockholm",
+        "detail": "2016"
+      },
+      {
+        "titre": "Tournoi d'Auckland",
+        "detail": "2025"
+      }
+    ],
+    "derniersMatchs": [
+      {
+        "victoire": false,
+        "adversaire": "Lorenzo Musetti",
+        "infos": "Shanghai · 1er tour · 2 oct. · Dur",
+        "score": "4-6, 3-6",
+        "exemple": true
+      },
+      {
+        "victoire": true,
+        "adversaire": "Tomas Machac",
+        "infos": "Challenger de Metz · quart de finale · 26 sept. · Dur",
+        "score": "6-4, 7-6(5)",
+        "exemple": true
+      },
+      {
+        "victoire": true,
+        "adversaire": "Cameron Norrie",
+        "infos": "Challenger de Metz · 2e tour · 25 sept. · Dur",
+        "score": "6-3, 6-4",
+        "exemple": true
+      }
+    ]
+  },
+  {
+    "id": "goffin",
+    "nom": "David Goffin",
+    "initiales": "DG",
+    "teinte": "violet",
+    "pays": "Belgique",
+    "rang": 0,
+    "feminin": false,
+    "age": 35,
+    "main": "Droitier",
+    "resume": "Joueur belge rapide et malin, qui prend la balle très tôt et joue avec beaucoup de précision et de finesse.",
+    "carriere": {
+      "titres": 5,
+      "finales": 10,
+      "meilleurRang": "7<sup>e</sup> mondial",
+      "estime": true
+    },
+    "trophees": [
+      {
+        "titre": "Tournoi de Shenzhen",
+        "detail": "2017"
+      },
+      {
+        "titre": "Tournoi de Tokyo",
+        "detail": "2017"
+      },
+      {
+        "titre": "Nitto ATP Finals",
+        "detail": "Finaliste en 2017"
+      }
+    ],
+    "derniersMatchs": [
+      {
+        "victoire": true,
+        "adversaire": "Matteo Berrettini",
+        "infos": "Challenger de Metz · demi-finale · 27 sept. · Dur",
+        "score": "6-4, 3-6, 6-3",
+        "exemple": true
+      },
+      {
+        "victoire": true,
+        "adversaire": "Ugo Humbert",
+        "infos": "Challenger de Metz · quart de finale · 26 sept. · Dur",
+        "score": "7-6(4), 6-4",
+        "exemple": true
+      },
+      {
+        "victoire": true,
+        "adversaire": "Alexei Popyrin",
+        "infos": "Challenger de Metz · 2e tour · 25 sept. · Dur",
+        "score": "6-2, 6-3",
+        "exemple": true
+      }
+    ]
+  },
+  {
+    "id": "thiem",
+    "nom": "Dominic Thiem",
+    "initiales": "DT",
+    "teinte": "ardoise",
+    "pays": "Autriche",
+    "rang": 0,
+    "feminin": false,
+    "age": 33,
+    "main": "Droitier",
+    "resume": "Joueur autrichien au revers à une main très puissant et au coup droit lourd, spécialiste de la terre battue.",
+    "carriere": {
+      "titres": 17,
+      "finales": 28,
+      "meilleurRang": "3<sup>e</sup> mondial",
+      "estime": true
+    },
+    "trophees": [
+      {
+        "titre": "US Open",
+        "detail": "2020"
+      },
+      {
+        "titre": "Masters 1000 d'Indian Wells",
+        "detail": "2019"
+      },
+      {
+        "titre": "Tournoi de Barcelone",
+        "detail": "2019"
+      }
+    ],
+    "derniersMatchs": [
+      {
+        "victoire": false,
+        "adversaire": "Sebastian Korda",
+        "infos": "Challenger de Metz · 2e tour · 25 sept. · Dur",
+        "score": "6-7(3), 4-6",
+        "exemple": true
+      },
+      {
+        "victoire": true,
+        "adversaire": "Tallon Griekspoor",
+        "infos": "Challenger de Metz · 1er tour · 24 sept. · Dur",
+        "score": "7-5, 6-4",
+        "exemple": true
+      },
+      {
+        "victoire": true,
+        "adversaire": "Cameron Norrie",
+        "infos": "Challenger de Vienne · quart de finale · 12 sept. · Terre",
+        "score": "6-3, 6-2",
+        "exemple": true
+      }
+    ]
+  },
+  {
+    "id": "rybakina",
+    "nom": "Elena Rybakina",
+    "initiales": "ER",
+    "teinte": "violet",
+    "pays": "Kazakhstan",
+    "rang": 1,
+    "feminin": true,
+    "age": 27,
+    "main": "Droitière",
+    "resume": "Joueuse kazakhe au service très puissant et aux frappes de fond de court très propres, calme et efficace dans les grands matchs.",
+    "carriere": {
+      "titres": 11,
+      "finales": 17,
+      "meilleurRang": "1<sup>re</sup> mondiale",
+      "estime": true
+    },
+    "trophees": [
+      {
+        "titre": "Wimbledon",
+        "detail": "2022"
+      },
+      {
+        "titre": "Open d'Australie",
+        "detail": "2026"
+      },
+      {
+        "titre": "WTA Finals",
+        "detail": "2025"
+      }
+    ],
+    "derniersMatchs": [
+      {
+        "victoire": true,
+        "adversaire": "Madison Keys",
+        "infos": "Pékin · quart de finale · 3 oct. · Dur",
+        "score": "6-4, 6-3",
+        "exemple": true
+      },
+      {
+        "victoire": true,
+        "adversaire": "Paula Badosa",
+        "infos": "Pékin · 3e tour · 1 oct. · Dur",
+        "score": "6-2, 6-4",
+        "exemple": true
+      },
+      {
+        "victoire": true,
+        "adversaire": "Clara Tauson",
+        "infos": "Pékin · 2e tour · 30 sept. · Dur",
+        "score": "7-5, 6-3",
+        "exemple": true
+      }
+    ]
+  },
+  {
+    "id": "sabalenka",
+    "nom": "Aryna Sabalenka",
+    "initiales": "AS",
+    "teinte": "orange",
+    "pays": "Biélorussie",
+    "rang": 2,
+    "feminin": true,
+    "age": 28,
+    "main": "Droitière",
+    "resume": "Joueuse biélorusse très puissante, qui frappe fort depuis le fond de court et domine souvent par son agressivité.",
+    "carriere": {
+      "titres": 21,
+      "finales": 31,
+      "meilleurRang": "1<sup>re</sup> mondiale",
+      "estime": true
+    },
+    "trophees": [
+      {
+        "titre": "Open d'Australie",
+        "detail": "2023 et 2024",
+        "nombre": 2
+      },
+      {
+        "titre": "US Open",
+        "detail": "2024 et 2025",
+        "nombre": 2
+      }
+    ],
+    "derniersMatchs": [
+      {
+        "victoire": true,
+        "adversaire": "Amanda Anisimova",
+        "infos": "Pékin · demi-finale · 4 oct. · Dur",
+        "score": "6-3, 7-5",
+        "exemple": true
+      },
+      {
+        "victoire": true,
+        "adversaire": "Diana Shnaider",
+        "infos": "Pékin · quart de finale · 3 oct. · Dur",
+        "score": "6-2, 6-1",
+        "exemple": true
+      },
+      {
+        "victoire": true,
+        "adversaire": "Ons Jabeur",
+        "infos": "Pékin · 3e tour · 1 oct. · Dur",
+        "score": "6-4, 6-4",
+        "exemple": true
+      }
+    ]
+  },
+  {
+    "id": "andreeva",
+    "nom": "Mirra Andreeva",
+    "initiales": "MA",
+    "teinte": "bleu",
+    "pays": "Russie",
+    "rang": 3,
+    "feminin": true,
+    "age": 19,
+    "main": "Droitière",
+    "resume": "Jeune Russe très mature pour son âge, avec un jeu complet et une grande intelligence tactique.",
+    "carriere": {
+      "titres": 4,
+      "finales": 6,
+      "meilleurRang": "3<sup>e</sup> mondiale",
+      "estime": true
+    },
+    "trophees": [
+      {
+        "titre": "WTA 1000 de Dubaï",
+        "detail": "2025"
+      },
+      {
+        "titre": "WTA 1000 d'Indian Wells",
+        "detail": "2026"
+      }
+    ],
+    "derniersMatchs": [
+      {
+        "victoire": false,
+        "adversaire": "Victoria Mboko",
+        "infos": "Pékin · 3e tour · 1 oct. · Dur",
+        "score": "4-6, 6-3, 3-6",
+        "exemple": true
+      },
+      {
+        "victoire": true,
+        "adversaire": "Daria Kasatkina",
+        "infos": "Pékin · 2e tour · 30 sept. · Dur",
+        "score": "6-3, 6-4",
+        "exemple": true
+      },
+      {
+        "victoire": true,
+        "adversaire": "Leylah Fernandez",
+        "infos": "Séoul · quart de finale · 20 sept. · Dur",
+        "score": "6-4, 6-2",
+        "exemple": true
+      }
+    ]
+  },
+  {
+    "id": "pegula",
+    "nom": "Jessica Pegula",
+    "initiales": "JP",
+    "teinte": "rouge",
+    "pays": "États-Unis",
+    "rang": 4,
+    "feminin": true,
+    "age": 32,
+    "main": "Droitière",
+    "resume": "Joueuse américaine très régulière, qui prend la balle tôt et reste solide dans les longs échanges.",
+    "carriere": {
+      "titres": 7,
+      "finales": 12,
+      "meilleurRang": "3<sup>e</sup> mondiale",
+      "estime": true
+    },
+    "trophees": [
+      {
+        "titre": "WTA 1000 du Canada",
+        "detail": "2023 et 2024",
+        "nombre": 2
+      }
+    ],
+    "derniersMatchs": [
+      {
+        "victoire": true,
+        "adversaire": "Maria Sakkari",
+        "infos": "Pékin · 3e tour · 1 oct. · Dur",
+        "score": "6-4, 7-6(3)",
+        "exemple": true
+      },
+      {
+        "victoire": true,
+        "adversaire": "Elise Mertens",
+        "infos": "Pékin · 2e tour · 30 sept. · Dur",
+        "score": "6-3, 6-3",
+        "exemple": true
+      },
+      {
+        "victoire": false,
+        "adversaire": "Liudmila Samsonova",
+        "infos": "Séoul · demi-finale · 20 sept. · Dur",
+        "score": "6-7(4), 4-6",
+        "exemple": true
+      }
+    ]
+  },
+  {
+    "id": "gauff",
+    "nom": "Coco Gauff",
+    "initiales": "CG",
+    "teinte": "ardoise",
+    "pays": "États-Unis",
+    "rang": 5,
+    "feminin": true,
+    "age": 22,
+    "main": "Droitière",
+    "resume": "Joueuse américaine athlétique et très rapide, au service puissant, vainqueure de Grands Chelems très jeune.",
+    "carriere": {
+      "titres": 10,
+      "finales": 16,
+      "meilleurRang": "2<sup>e</sup> mondiale",
+      "estime": true
+    },
+    "trophees": [
+      {
+        "titre": "US Open",
+        "detail": "2023"
+      },
+      {
+        "titre": "Roland-Garros",
+        "detail": "2025"
+      },
+      {
+        "titre": "WTA Finals",
+        "detail": "2024"
+      }
+    ],
+    "derniersMatchs": [
+      {
+        "victoire": false,
+        "adversaire": "Amanda Anisimova",
+        "infos": "Pékin · quart de finale · 3 oct. · Dur",
+        "score": "3-6, 6-7(5)",
+        "exemple": true
+      },
+      {
+        "victoire": true,
+        "adversaire": "Jelena Ostapenko",
+        "infos": "Pékin · 3e tour · 1 oct. · Dur",
+        "score": "6-4, 6-4",
+        "exemple": true
+      },
+      {
+        "victoire": true,
+        "adversaire": "Danielle Collins",
+        "infos": "Pékin · 2e tour · 30 sept. · Dur",
+        "score": "7-6(2), 6-3",
+        "exemple": true
+      }
+    ]
+  },
+  {
+    "id": "svitolina",
+    "nom": "Elina Svitolina",
+    "initiales": "ES",
+    "teinte": "bleu",
+    "pays": "Ukraine",
+    "rang": 6,
+    "feminin": true,
+    "age": 32,
+    "main": "Droitière",
+    "resume": "Joueuse ukrainienne combative et intelligente, très solide en défense et excellente tacticienne.",
+    "carriere": {
+      "titres": 19,
+      "finales": 32,
+      "meilleurRang": "3<sup>e</sup> mondiale",
+      "estime": true
+    },
+    "trophees": [
+      {
+        "titre": "Internationaux d'Italie",
+        "detail": "2017 et 2018",
+        "nombre": 2
+      },
+      {
+        "titre": "WTA Finals",
+        "detail": "2018"
+      }
+    ],
+    "derniersMatchs": [
+      {
+        "victoire": true,
+        "adversaire": "Barbora Krejcikova",
+        "infos": "Pékin · 3e tour · 1 oct. · Dur",
+        "score": "6-3, 6-4",
+        "exemple": true
+      },
+      {
+        "victoire": true,
+        "adversaire": "Anna Kalinskaya",
+        "infos": "Pékin · 2e tour · 30 sept. · Dur",
+        "score": "6-4, 7-5",
+        "exemple": true
+      },
+      {
+        "victoire": false,
+        "adversaire": "Ekaterina Alexandrova",
+        "infos": "Séoul · quart de finale · 19 sept. · Dur",
+        "score": "4-6, 6-3, 2-6",
+        "exemple": true
+      }
+    ]
+  },
+  {
+    "id": "muchova",
+    "nom": "Karolina Muchova",
+    "initiales": "KM",
+    "teinte": "violet",
+    "pays": "République tchèque",
+    "rang": 7,
+    "feminin": true,
+    "age": 30,
+    "main": "Droitière",
+    "resume": "Joueuse tchèque créative, qui varie les coups avec des amorties, des slices et beaucoup de toucher.",
+    "carriere": {
+      "titres": 3,
+      "finales": 6,
+      "meilleurRang": "7<sup>e</sup> mondiale",
+      "estime": true
+    },
+    "trophees": [
+      {
+        "titre": "Roland-Garros",
+        "detail": "Finaliste en 2023"
+      }
+    ],
+    "derniersMatchs": [
+      {
+        "victoire": false,
+        "adversaire": "Qinwen Zheng",
+        "infos": "Pékin · 2e tour · 30 sept. · Dur",
+        "score": "6-7(5), 3-6",
+        "exemple": true
+      },
+      {
+        "victoire": true,
+        "adversaire": "Paula Badosa",
+        "infos": "Pékin · 1er tour · 28 sept. · Dur",
+        "score": "6-4, 6-3",
+        "exemple": true
+      },
+      {
+        "victoire": true,
+        "adversaire": "Clara Tauson",
+        "infos": "Séoul · 2e tour · 18 sept. · Dur",
+        "score": "7-5, 6-2",
+        "exemple": true
+      }
+    ]
+  },
+  {
+    "id": "swiatek",
+    "nom": "Iga Swiatek",
+    "initiales": "IS",
+    "teinte": "rouge",
+    "pays": "Pologne",
+    "rang": 8,
+    "feminin": true,
+    "age": 25,
+    "main": "Droitière",
+    "resume": "Joueuse polonaise spécialiste de la terre battue, avec un coup droit lifté très lourd et un jeu de jambes exceptionnel.",
+    "carriere": {
+      "titres": 25,
+      "finales": 31,
+      "meilleurRang": "1<sup>re</sup> mondiale",
+      "estime": true
+    },
+    "trophees": [
+      {
+        "titre": "Roland-Garros",
+        "detail": "2020, 2022, 2023 et 2024",
+        "nombre": 4
+      },
+      {
+        "titre": "US Open",
+        "detail": "2022"
+      },
+      {
+        "titre": "Wimbledon",
+        "detail": "2025"
+      },
+      {
+        "titre": "WTA Finals",
+        "detail": "2023"
+      }
+    ],
+    "derniersMatchs": [
+      {
+        "victoire": true,
+        "adversaire": "Ekaterina Alexandrova",
+        "infos": "Pékin · demi-finale · 4 oct. · Dur",
+        "score": "6-2, 6-3",
+        "exemple": true
+      },
+      {
+        "victoire": true,
+        "adversaire": "Qinwen Zheng",
+        "infos": "Pékin · quart de finale · 3 oct. · Dur",
+        "score": "6-4, 6-1",
+        "exemple": true
+      },
+      {
+        "victoire": true,
+        "adversaire": "Madison Keys",
+        "infos": "Pékin · 3e tour · 1 oct. · Dur",
+        "score": "6-3, 6-3",
+        "exemple": true
+      }
+    ]
+  },
+  {
+    "id": "noskova",
+    "nom": "Linda Noskova",
+    "initiales": "LN",
+    "teinte": "orange",
+    "pays": "République tchèque",
+    "rang": 9,
+    "feminin": true,
+    "age": 21,
+    "main": "Droitière",
+    "resume": "Jeune Tchèque grande et puissante, au service et aux frappes à plat très rapides.",
+    "carriere": {
+      "titres": 1,
+      "finales": 3,
+      "meilleurRang": "9<sup>e</sup> mondiale",
+      "estime": true
+    },
+    "trophees": [],
+    "derniersMatchs": [
+      {
+        "victoire": true,
+        "adversaire": "Liudmila Samsonova",
+        "infos": "Pékin · 2e tour · 30 sept. · Dur",
+        "score": "6-4, 6-4",
+        "exemple": true
+      },
+      {
+        "victoire": true,
+        "adversaire": "Ons Jabeur",
+        "infos": "Pékin · 1er tour · 28 sept. · Dur",
+        "score": "7-6(4), 6-3",
+        "exemple": true
+      },
+      {
+        "victoire": false,
+        "adversaire": "Victoria Mboko",
+        "infos": "Séoul · 2e tour · 18 sept. · Dur",
+        "score": "3-6, 4-6",
+        "exemple": true
+      }
+    ]
+  },
+  {
+    "id": "kostyuk",
+    "nom": "Marta Kostyuk",
+    "initiales": "MK",
+    "teinte": "ardoise",
+    "pays": "Ukraine",
+    "rang": 10,
+    "feminin": true,
+    "age": 24,
+    "main": "Droitière",
+    "resume": "Joueuse ukrainienne agressive et courageuse, qui prend la balle tôt et joue avec beaucoup de caractère.",
+    "carriere": {
+      "titres": 2,
+      "finales": 4,
+      "meilleurRang": "10<sup>e</sup> mondiale",
+      "estime": true
+    },
+    "trophees": [],
+    "derniersMatchs": [
+      {
+        "victoire": false,
+        "adversaire": "Jelena Ostapenko",
+        "infos": "Pékin · 2e tour · 30 sept. · Dur",
+        "score": "5-7, 4-6",
+        "exemple": true
+      },
+      {
+        "victoire": true,
+        "adversaire": "Danielle Collins",
+        "infos": "Pékin · 1er tour · 28 sept. · Dur",
+        "score": "6-4, 6-4",
+        "exemple": true
+      },
+      {
+        "victoire": true,
+        "adversaire": "Maria Sakkari",
+        "infos": "Séoul · 2e tour · 18 sept. · Dur",
+        "score": "6-3, 7-5",
+        "exemple": true
+      }
+    ]
+  },
+  {
+    "id": "navarro",
+    "nom": "Emma Navarro",
+    "initiales": "EN",
+    "teinte": "bleu",
+    "pays": "États-Unis",
+    "rang": 28,
+    "feminin": true,
+    "age": 25,
+    "main": "Droitière",
+    "resume": "Joueuse américaine régulière et solide, qui frappe proprement et progresse vite au classement.",
+    "carriere": {
+      "titres": 1,
+      "finales": 2,
+      "meilleurRang": "8<sup>e</sup> mondiale",
+      "estime": true
+    },
+    "trophees": [],
+    "derniersMatchs": [
+      {
+        "victoire": true,
+        "adversaire": "Leylah Fernandez",
+        "infos": "Ningbo · quart de finale · 6 oct. · Dur",
+        "score": "6-4, 6-4",
+        "exemple": true
+      },
+      {
+        "victoire": true,
+        "adversaire": "Elise Mertens",
+        "infos": "Ningbo · 2e tour · 5 oct. · Dur",
+        "score": "7-5, 6-3",
+        "exemple": true
+      },
+      {
+        "victoire": false,
+        "adversaire": "Barbora Krejcikova",
+        "infos": "Pékin · 2e tour · 30 sept. · Dur",
+        "score": "4-6, 6-7(4)",
+        "exemple": true
+      }
+    ]
+  },
+  {
+    "id": "osaka",
+    "nom": "Naomi Osaka",
+    "initiales": "NO",
+    "teinte": "rouge",
+    "pays": "Japon",
+    "rang": 18,
+    "feminin": true,
+    "age": 29,
+    "main": "Droitière",
+    "resume": "Joueuse japonaise très puissante, redoutable sur dur, avec un service et un coup droit explosifs.",
+    "carriere": {
+      "titres": 7,
+      "finales": 10,
+      "meilleurRang": "1<sup>re</sup> mondiale",
+      "estime": true
+    },
+    "trophees": [
+      {
+        "titre": "Open d'Australie",
+        "detail": "2019 et 2021",
+        "nombre": 2
+      },
+      {
+        "titre": "US Open",
+        "detail": "2018 et 2020",
+        "nombre": 2
+      }
+    ],
+    "derniersMatchs": [
+      {
+        "victoire": true,
+        "adversaire": "Anna Kalinskaya",
+        "infos": "Ningbo · 2e tour · 5 oct. · Dur",
+        "score": "6-3, 6-4",
+        "exemple": true
+      },
+      {
+        "victoire": false,
+        "adversaire": "Amanda Anisimova",
+        "infos": "Pékin · 3e tour · 1 oct. · Dur",
+        "score": "6-7(3), 5-7",
+        "exemple": true
+      },
+      {
+        "victoire": true,
+        "adversaire": "Daria Kasatkina",
+        "infos": "Pékin · 2e tour · 30 sept. · Dur",
+        "score": "6-4, 3-6, 6-3",
+        "exemple": true
+      }
+    ]
+  },
+  {
+    "id": "belinda",
+    "nom": "Belinda Bencic",
+    "initiales": "BB",
+    "teinte": "violet",
+    "pays": "Suisse",
+    "rang": 13,
+    "feminin": true,
+    "age": 29,
+    "main": "Droitière",
+    "resume": "Joueuse suisse au jeu très intelligent, qui prend la balle tôt et change bien les trajectoires.",
+    "carriere": {
+      "titres": 9,
+      "finales": 13,
+      "meilleurRang": "4<sup>e</sup> mondiale",
+      "estime": true
+    },
+    "trophees": [
+      {
+        "titre": "Jeux olympiques de Tokyo",
+        "detail": "Médaille d'or en simple"
+      }
+    ],
+    "derniersMatchs": [
+      {
+        "victoire": true,
+        "adversaire": "Jasmine Paolini",
+        "infos": "Tokyo · 1er tour · 13 sept. · Dur",
+        "score": "6-4, 7-5",
+        "matchId": "m1"
+      }
+    ]
+  },
+  {
+    "id": "teichmann",
+    "nom": "Jil Teichmann",
+    "initiales": "JT",
+    "teinte": "orange",
+    "pays": "Suisse",
+    "rang": 114,
+    "feminin": true,
+    "age": 29,
+    "main": "Gauchère",
+    "resume": "Joueuse suisse gauchère au jeu varié, avec beaucoup de slices et d'effets difficiles à lire.",
+    "carriere": {
+      "titres": 1,
+      "finales": 3,
+      "meilleurRang": "21<sup>e</sup> mondiale",
+      "estime": true
+    },
+    "trophees": [
+      {
+        "titre": "Tournoi de Prague",
+        "detail": "2021"
+      }
+    ],
+    "derniersMatchs": [
+      {
+        "victoire": true,
+        "adversaire": "Clara Tauson",
+        "infos": "Ningbo · 1er tour · 5 oct. · Dur",
+        "score": "6-4, 6-2",
+        "exemple": true
+      },
+      {
+        "victoire": false,
+        "adversaire": "Victoria Mboko",
+        "infos": "Ningbo · 2e tour · 6 oct. · Dur",
+        "score": "3-6, 6-7(5)",
+        "exemple": true
+      },
+      {
+        "victoire": true,
+        "adversaire": "Elise Mertens",
+        "infos": "Séoul · 1er tour · 17 sept. · Dur",
+        "score": "7-6(4), 6-3",
+        "exemple": true
+      }
+    ]
+  },
+  {
+    "id": "venus",
+    "nom": "Venus Williams",
+    "initiales": "VW",
+    "teinte": "ardoise",
+    "pays": "États-Unis",
+    "rang": 0,
+    "feminin": true,
+    "age": 46,
+    "main": "Droitière",
+    "resume": "Légende américaine au service très puissant et à l'allonge impressionnante, grande championne de Wimbledon.",
+    "carriere": {
+      "titres": "49",
+      "finales": 83,
+      "meilleurRang": "1<sup>re</sup> mondiale",
+      "estime": true
+    },
+    "trophees": [
+      {
+        "titre": "Wimbledon",
+        "detail": "2000, 2001, 2005, 2007 et 2008",
+        "nombre": 5
+      },
+      {
+        "titre": "US Open",
+        "detail": "2000 et 2001",
+        "nombre": 2
+      },
+      {
+        "titre": "Jeux olympiques de Sydney",
+        "detail": "Médaille d'or en simple"
+      }
+    ],
+    "derniersMatchs": []
+  },
+  {
+    "id": "serena",
+    "nom": "Serena Williams",
+    "initiales": "SW",
+    "teinte": "violet",
+    "pays": "États-Unis",
+    "rang": 0,
+    "feminin": true,
+    "age": 45,
+    "main": "Droitière",
+    "resume": "Légende américaine, considérée comme l'une des plus grandes de l'histoire grâce à son service dévastateur et sa puissance.",
+    "carriere": {
+      "titres": "73",
+      "finales": 93,
+      "meilleurRang": "1<sup>re</sup> mondiale",
+      "estime": true
+    },
+    "trophees": [
+      {
+        "titre": "Open d'Australie",
+        "detail": "7 titres entre 2003 et 2017",
+        "nombre": 7
+      },
+      {
+        "titre": "Roland-Garros",
+        "detail": "2002, 2013 et 2015",
+        "nombre": 3
+      },
+      {
+        "titre": "Wimbledon",
+        "detail": "7 titres entre 2002 et 2016",
+        "nombre": 7
+      },
+      {
+        "titre": "US Open",
+        "detail": "6 titres entre 1999 et 2014",
+        "nombre": 6
+      },
+      {
+        "titre": "Jeux olympiques de Londres",
+        "detail": "Médaille d'or en simple"
+      }
+    ],
+    "derniersMatchs": [
+      {
+        "victoire": false,
+        "adversaire": "Ajla Tomljanovic",
+        "infos": "US Open · 3e tour · 2 sept. 2022 · Dur",
+        "score": "5-7, 7-6(4), 1-6"
+      }
+    ]
+  },
+  {
+    "id": "king",
+    "nom": "Billie Jean King",
+    "initiales": "BK",
+    "teinte": "bleu",
+    "pays": "États-Unis",
+    "rang": 0,
+    "feminin": true,
+    "age": 82,
+    "main": "Droitière",
+    "resume": "Pionnière américaine du tennis et de l'égalité dans le sport, grande volleyeuse et vainqueure de 12 titres du Grand Chelem en simple.",
+    "carriere": {
+      "titres": 67,
+      "finales": "—",
+      "meilleurRang": "1<sup>re</sup> mondiale",
+      "estime": true
+    },
+    "trophees": [
+      {
+        "titre": "Open d'Australie",
+        "detail": "1968"
+      },
+      {
+        "titre": "Roland-Garros",
+        "detail": "1972"
+      },
+      {
+        "titre": "Wimbledon",
+        "detail": "6 titres entre 1966 et 1975",
+        "nombre": 6
+      },
+      {
+        "titre": "US Open",
+        "detail": "1967, 1971, 1972 et 1974",
+        "nombre": 4
+      }
+    ],
+    "derniersMatchs": []
+  }
+]
