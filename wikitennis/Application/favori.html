@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0b1013" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+    <title>Tennispedia · Mes favoris</title>
+  </head>
+  <body data-page="favoris" class="avec-onglets">
+    <header class="entete">
+      <span class="point"></span>
+      <h1 class="titre-page">Mes favoris</h1>
+    </header>
+    <main class="ecran">
+      <p id="etat" role="status"></p>
+      <ol class="classement" id="liste"></ol>
+      <p class="vide" id="aucun" hidden>
+        Aucun favori pour le moment.
+        <a class="lien-retour-vide" href="index.html">Voir les joueurs</a>
+      </p>
+    </main>
+    <footer class="pied"><p>© 2026 — Votre prénom</p></footer>
+    <nav class="onglets" id="onglets" aria-label="Navigation principale"></nav>
+  </body>
+</html>
