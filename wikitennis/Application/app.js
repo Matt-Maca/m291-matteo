@@ -20,6 +20,7 @@ const CHEMIN_COEUR =
   "M12 20.5s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.6a4.3 4.3 0 0 1 7.5 2.7c0 5.6-7.5 10.2-7.5 10.2z";
 
 let tousLesJoueurs = [];
+let donneesChargees = false;
 const favoris = new Set(lireFavoris());
 
 /* ---------- Utilitaires ---------- */
@@ -97,8 +98,9 @@ function creerCarte(joueur, position) {
   const ligne = el("li", "ligne");
   ligne.append(el("span", "rang", position));
 
-  const lien = el("a", "lien");
-  lien.href = "joueur.html?id=" + encodeURIComponent(joueur.id);
+  // une proposition n'est pas dans data.json : pas de page de profil à ouvrir
+  const lien = el(joueur.propose ? "div" : "a", "lien");
+  if (!joueur.propose) lien.href = "joueur.html?id=" + encodeURIComponent(joueur.id);
   const avatar = el("span", "avatar avatar--" + joueur.teinte, joueur.initiales);
   const bloc = el("div", "grow");
   bloc.append(el("h3", "", joueur.nom), el("p", "commune", joueur.pays));
@@ -311,6 +313,7 @@ fetch("data.json")
   })
   .then((donnees) => {
     tousLesJoueurs = donnees;
+    donneesChargees = true;
 
     if (page === "accueil" || page === "favoris") {
       if (tousLesJoueurs.length === 0) {
@@ -343,3 +346,71 @@ fetch("data.json")
     console.error(erreur);
     afficherErreur("Impossible de charger les données. Réessayez plus tard.");
   });
+/* ---------- Ajouter un joueur (accueil) ---------- */
+
+const TEINTES = ["rouge", "violet", "orange", "bleu", "ardoise"];
+const formulaireProposer = document.getElementById("proposer");
+const fenetreAjout = document.getElementById("fenetre-ajout");
+const boutonAjouter = document.getElementById("ouvrir-ajout");
+
+function initialesDe(nom) {
+  return nom
+    .split(/\s+/)
+    .slice(0, 2)
+    .map((mot) => mot[0])
+    .join("")
+    .toUpperCase();
+}
+
+if (formulaireProposer) {
+  boutonAjouter.addEventListener("click", () => {
+    document.getElementById("erreurs").textContent = "";
+    fenetreAjout.showModal();
+  });
+  document.getElementById("annuler-ajout").addEventListener("click", () => fenetreAjout.close());
+  // un clic sur le fond sombre ferme aussi la fenêtre
+  fenetreAjout.addEventListener("click", (e) => {
+    if (e.target === fenetreAjout) fenetreAjout.close();
+  });
+
+  formulaireProposer.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const donnees = new FormData(formulaireProposer);
+    const nom = donnees.get("nom").trim();
+    const pays = donnees.get("pays").trim();
+
+    const erreurs = [];
+    if (nom.length < 2) {
+      erreurs.push("Le nom doit avoir au moins 2 caractères.");
+    }
+    if (pays === "") {
+      erreurs.push("Indiquez le pays.");
+    }
+    if (!donneesChargees) {
+      erreurs.push("La liste n'est pas encore chargée, réessayez dans un instant.");
+    }
+
+    const zoneErreurs = document.getElementById("erreurs");
+    if (erreurs.length > 0) {
+      zoneErreurs.textContent = "Erreur : " + erreurs.join(" ");
+      if (nom.length < 2) document.getElementById("champ-nom").focus();
+      return;
+    }
+    zoneErreurs.textContent = "";
+
+    tousLesJoueurs.unshift({
+      id: "propose-" + Date.now(),
+      nom: nom,
+      initiales: initialesDe(nom),
+      teinte: TEINTES[tousLesJoueurs.length % TEINTES.length],
+      pays: pays,
+      propose: true
+    });
+
+    if (champRecherche) champRecherche.value = "";
+    afficherListe();
+    formulaireProposer.reset();
+    fenetreAjout.close();
+  });
+}

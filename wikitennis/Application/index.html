@@ -36,6 +36,10 @@
           autocomplete="off"
         />
       </form>
+      <button class="btn-ajouter" id="ouvrir-ajout" type="button">
+        <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14" /><path d="M5 12h14" /></svg>
+        <span>Ajouter<span class="cache"> un joueur</span></span>
+      </button>
     </nav>
     <main class="ecran">
       <h2 class="etiquette">Populaires cette semaine</h2>
@@ -43,6 +47,20 @@
       <ol class="classement" id="liste"></ol>
       <p class="vide" id="aucun" hidden>Aucun joueur ne correspond à votre recherche.</p>
     </main>
+    <dialog class="fenetre" id="fenetre-ajout" aria-labelledby="titre-ajout">
+      <form id="proposer" novalidate>
+        <h2 class="titre-fenetre" id="titre-ajout">Ajouter un joueur</h2>
+        <label for="champ-nom">Nom du joueur</label>
+        <input type="text" id="champ-nom" name="nom" autocomplete="off" />
+        <label for="champ-pays">Pays</label>
+        <input type="text" id="champ-pays" name="pays" autocomplete="off" />
+        <p id="erreurs" aria-live="polite"></p>
+        <div class="actions-fenetre">
+          <button class="btn-secondaire" id="annuler-ajout" type="button">Annuler</button>
+          <button class="cta" type="submit">Ajouter</button>
+        </div>
+      </form>
+    </dialog>
     <footer class="pied"><p>© 2026 — Votre prénom</p></footer>
     <nav class="onglets" id="onglets" aria-label="Navigation principale"></nav>
   </body>
