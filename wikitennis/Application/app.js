@@ -73,6 +73,20 @@ function creerIcone(chemins) {
 
 function afficherErreur(message) {
   zoneEtat.textContent = message;
+  const cible = conteneur || contenu;
+  if (cible) cible.replaceChildren();
+}
+
+function afficherSqueletes(nombre) {
+  const cible = conteneur || contenu;
+  if (!cible) return;
+  const blocs = [];
+  for (let i = 0; i < nombre; i++) {
+    const bloc = el(conteneur ? "li" : "div", "squelette");
+    bloc.setAttribute("aria-hidden", "true");
+    blocs.push(bloc);
+  }
+  cible.replaceChildren(...blocs);
 }
 
 /* ---------- Onglets ---------- */
@@ -305,6 +319,7 @@ if (champRecherche) {
 }
 
 zoneEtat.textContent = "Chargement…";
+afficherSqueletes(conteneur ? 6 : 3);
 
 fetch("data.json")
   .then((reponse) => {

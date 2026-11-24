@@ -746,3 +746,202 @@ ol {
   text-transform: uppercase;
   cursor: pointer;
 }
+/* =========================================================
+   Micro-interactions (e3-5) — mobile d'abord, durées ≤ 200 ms
+   ========================================================= */
+
+/* ---------- Animations qui marchent au doigt (aucun hover) ---------- */
+
+/* 1. Apparition en fondu */
+@keyframes fondu {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.classement .ligne,
+.hero,
+.stat,
+.trophees li,
+.match-ligne,
+.set,
+.detail {
+  animation: fondu 0.2s ease both;
+}
+
+/* 2. Cœur favori : couleur + remplissage en douceur, "pop" au relâchement */
+.favori {
+  transition: color 0.2s ease;
+}
+
+.favori .icone {
+  fill: transparent;
+  transform: scale(1);
+  transition: fill 0.2s ease, transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.favori[aria-pressed="true"] .icone {
+  fill: currentColor;
+}
+
+.favori:active .icone {
+  transform: scale(0.7);
+}
+
+/* 3. Retour tactile au doigt (:active = pendant l'appui) */
+.avatar,
+.lien h3,
+.match-ligne,
+.onglets a,
+.retour .icone {
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.lien:active h3 {
+  color: var(--color-primary);
+}
+
+.lien:active .avatar {
+  transform: scale(0.94);
+}
+
+.match-ligne:active {
+  transform: scale(0.98);
+}
+
+.onglets a:active {
+  color: var(--color-text);
+}
+
+.retour:active .icone {
+  transform: translateX(-3px);
+}
+
+/* 4. Boutons : s'enfoncent quand on appuie */
+.cta,
+.btn-ajouter,
+.btn-secondaire {
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta:active,
+.btn-ajouter:active,
+.btn-secondaire:active {
+  transform: scale(0.96);
+}
+
+/* Le bouton "Dans mes favoris" ne doit pas rester jaune après un tap */
+.cta--actif,
+.cta--actif:hover {
+  background: transparent;
+}
+
+/* 5. Champs : bordure qui s'allume au focus */
+.recherche input,
+.fenetre input {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.recherche input:focus-visible,
+.fenetre input:focus-visible {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(212, 236, 60, 0.18);
+  outline: none;
+}
+
+/* 6. Fenêtre "Ajouter un joueur" : fondu + léger zoom */
+@keyframes fenetre-entree {
+  from { opacity: 0; transform: translateY(8px) scale(0.97); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes fond-entree {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.fenetre[open] {
+  animation: fenetre-entree 0.2s ease;
+}
+
+.fenetre[open]::backdrop {
+  animation: fond-entree 0.2s ease;
+}
+
+/* 7. Message d'erreur : petite secousse */
+@keyframes secousse {
+  0%, 100% { transform: none; }
+  25%      { transform: translateX(-4px); }
+  75%      { transform: translateX(4px); }
+}
+
+#erreurs:not(:empty) {
+  animation: secousse 0.2s ease;
+}
+
+/* ---------- Hover : seulement souris / trackpad ----------
+   Sur téléphone, :hover reste "collé" après un tap : on le réserve
+   aux appareils qui ont vraiment un survol. */
+@media (hover: hover) and (pointer: fine) {
+  .favori:hover {
+    color: var(--color-text);
+  }
+
+  .favori[aria-pressed="true"]:hover {
+    color: var(--color-primary-hover);
+  }
+
+  .lien:hover h3 {
+    color: var(--color-primary);
+  }
+
+  .lien:hover .avatar {
+    transform: scale(1.06);
+  }
+
+  .cta:hover,
+  .btn-ajouter:hover {
+    transform: translateY(-1px);
+  }
+
+  .btn-secondaire:hover {
+    background: var(--color-surface-2);
+  }
+
+  .onglets a:hover {
+    color: var(--color-text);
+  }
+
+  .onglets a[aria-current="page"]:hover {
+    color: var(--color-primary);
+  }
+
+  .match-ligne:hover {
+    transform: translateX(4px);
+  }
+
+  .retour:hover .icone {
+    transform: translateX(-3px);
+  }
+}
+
+/* Écran de chargement : blocs qui pulsent */
+@keyframes pulse {
+  from { opacity: 0.4; }
+  to   { opacity: 1; }
+}
+
+.squelette {
+  height: 4.5rem;
+  margin-bottom: var(--space-2);
+  background: var(--color-border);
+  border-radius: var(--radius-card);
+  animation: pulse 0.8s ease alternate infinite;
+}
+
+/* Accessibilité : à garder à la FIN du fichier */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
